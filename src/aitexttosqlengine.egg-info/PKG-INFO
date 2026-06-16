@@ -1,3 +1,20 @@
+Metadata-Version: 2.4
+Name: aitexttosqlengine
+Version: 0.1.0
+Summary: Text-to-SQL engine prototype built from a LangChain notebook workflow
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: chromadb>=1.5.9
+Requires-Dist: jupyter>=1.1.1
+Requires-Dist: langchain>=1.3.9
+Requires-Dist: langchain-chroma>=1.1.0
+Requires-Dist: langchain-openai>=1.3.2
+Requires-Dist: minsearch>=0.1.0
+Requires-Dist: openai>=2.41.1
+Requires-Dist: psycopg[binary]>=3.3.4
+Requires-Dist: python-dotenv>=1.2.2
+Requires-Dist: requests>=2.34.2
+
 # aitexttosqlengine
 
 A prototype project that converts natural language questions into SQL queries using LangChain, OpenAI, and Chroma vector search.

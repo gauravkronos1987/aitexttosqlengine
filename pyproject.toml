@@ -1,7 +1,7 @@
 [project]
 name = "aitexttosqlengine"
 version = "0.1.0"
-description = "Add your description here"
+description = "Text-to-SQL engine prototype built from a LangChain notebook workflow"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -16,3 +16,14 @@ dependencies = [
     "python-dotenv>=1.2.2",
     "requests>=2.34.2",
 ]
+
+[project.scripts]
+aitexttosqlengine = "aitexttosqlengine.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["aitexttosqlengine*"]
+
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
