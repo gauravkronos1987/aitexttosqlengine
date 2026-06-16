@@ -1,6 +1,7 @@
 README.md
 pyproject.toml
 src/aitexttosqlengine/__init__.py
+src/aitexttosqlengine/__main__.py
 src/aitexttosqlengine/cli.py
 src/aitexttosqlengine/db.py
 src/aitexttosqlengine/engine.py
@@ -10,3 +11,6 @@ src/aitexttosqlengine.egg-info/dependency_links.txt
 src/aitexttosqlengine.egg-info/entry_points.txt
 src/aitexttosqlengine.egg-info/requires.txt
 src/aitexttosqlengine.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_db.py
+tests/test_engine.py

@@ -62,6 +62,26 @@ export OPENAI_API_KEY="your-key-here"
 python -m aitexttosqlengine "What are the top customers by revenue?"
 ```
 
+## Testing
+
+Install test dependencies:
+
+```bash
+pip install -e .[dev]
+```
+
+Run the tests with pytest:
+
+```bash
+pytest
+```
+
+The test suite covers:
+
+- SQL extraction logic in `src/aitexttosqlengine/engine.py`
+- pretty table formatting in `src/aitexttosqlengine/cli.py`
+- database header extraction in `src/aitexttosqlengine/db.py` using a mocked connection
+
 Or, after installing the package, use the script:
 
 ```bash
