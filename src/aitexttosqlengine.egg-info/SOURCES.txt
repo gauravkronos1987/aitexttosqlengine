@@ -2,6 +2,7 @@ README.md
 pyproject.toml
 src/aitexttosqlengine/__init__.py
 src/aitexttosqlengine/__main__.py
+src/aitexttosqlengine/app.py
 src/aitexttosqlengine/cli.py
 src/aitexttosqlengine/db.py
 src/aitexttosqlengine/engine.py
