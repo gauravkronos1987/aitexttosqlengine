@@ -1,8 +1,5 @@
 import streamlit as st
 
-#from assistant import create_assistant
-#from db_save import save_conversation
-#from db_feedback import save_feedback
 from aitexttosqlengine.engine import TextToSQLEngine
 from aitexttosqlengine.db import DatabaseManager
 from aitexttosqlengine.cli import format_table
