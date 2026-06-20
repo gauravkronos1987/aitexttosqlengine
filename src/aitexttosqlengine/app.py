@@ -25,7 +25,7 @@ try:
 except Exception:
     st.warning("Database initialization or seeding failed; continuing without initialization.")
 
-st.title("Course Assistant")
+st.title("Natural Language SQL Assistant")
 
 user_input = st.text_input("Enter your query:")
 ask = st.button("Ask")
