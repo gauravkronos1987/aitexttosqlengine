@@ -1,12 +1,16 @@
 from __future__ import annotations
 
+import time
 import psycopg
 from typing import Iterable
 
 
 class DatabaseManager:
     def __init__(self, dsn: str):
+        start = time.perf_counter()
         self.conn = psycopg.connect(dsn, autocommit=True)
+        elapsed = time.perf_counter() - start
+        print(f"DB connect time: {elapsed:.3f}s")
 
     def initialize_schema(self) -> None:
         self.conn.execute("""
@@ -71,7 +75,10 @@ class DatabaseManager:
         return self.conn.execute(query)
 
     def query(self, query: str):
+        start = time.perf_counter()
         result = self.conn.execute(query)
+        elapsed = time.perf_counter() - start
+        print(f"DB query time: {elapsed:.3f}s")
         headers = [column.name for column in result.description] if result.description else []
         return headers, result.fetchall()
 
