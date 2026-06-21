@@ -21,29 +21,15 @@ jobs:
       contents: read #Required when GH token is used to authenticate with private repo
 
     steps:
-      - name: Checkout to the branch
-        uses: actions/checkout@v2
+        - name: Login to ACR
+          uses: azure/docker-login@v1
+          with:
+           login-server: ${{ secrets.ACR_LOGIN_SERVER }}
+           username: ${{ secrets.ACR_USERNAME }}
+           password: ${{ secrets.ACR_PASSWORD }}
 
-      - name: Azure Login
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AITEXTTOSQL_AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AITEXTTOSQL_AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AITEXTTOSQL_AZURE_SUBSCRIPTION_ID }}
+        - name : Build Image
+          run : docker push ${{ secrets.ACR_LOGIN_SERVER }}/aitexttosql:${{ github.sha }}
 
-      - name: Build and push container image to registry
-        uses: azure/container-apps-deploy-action@v2
-        with:
-          appSourcePath: ${{ github.workspace }}
-          _dockerfilePathKey_: _dockerfilePath_
-          _targetLabelKey_: _targetLabel_
-          registryUrl: 
-          registryUsername: ${{ secrets.AITEXTTOSQL_REGISTRY_USERNAME }}
-          registryPassword: ${{ secrets.AITEXTTOSQL_REGISTRY_PASSWORD }}
-          containerAppName: aitexttosql
-          resourceGroup: AITEXTTOSQLENGINE_group
-          imageToBuild: default/[parameters('containerAppName')]:${{ github.sha }}
-          _buildArgumentsKey_: |
-            _buildArgumentsValues_
 
 
