@@ -31,12 +31,17 @@ jobs:
           tenant-id: ${{ secrets.AITEXTTOSQL_AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AITEXTTOSQL_AZURE_SUBSCRIPTION_ID }}
 
-      - name: Login to container registry
-        uses: docker/login-action@v2
-        with:
-          registry: ${{ secrets.AITEXTTOSQL_REGISTRY_URL }}
-          username: ${{ secrets.AITEXTTOSQL_REGISTRY_USERNAME }}
-          password: ${{ secrets.AITEXTTOSQL_REGISTRY_PASSWORD }}
+      - name: Login to Azure Container Registry
+        run: |
+          ACR_URL="${{ secrets.AITEXTTOSQL_REGISTRY_URL }}"
+          if [ -z "$ACR_URL" ]; then
+            echo "Missing AITEXTTOSQL_REGISTRY_URL secret" >&2
+            exit 1
+          fi
+          # extract the ACR name from the registry URL (e.g. myacr.azurecr.io -> myacr)
+          ACR_NAME="${ACR_URL%%.*}"
+          echo "Logging in to ACR: $ACR_NAME"
+          az acr login --name "$ACR_NAME"
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
