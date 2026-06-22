@@ -40,14 +40,17 @@ if ask:
                 st.write("**Generated SQL:**")
                 st.code(generatedsql, language="sql")
                 try:
-                    headers, rows = db_manager.query(generatedsql)
-                    st.success("Query executed!")
-                    if rows:
-                        import pandas as pd
-
-                        df = pd.DataFrame(rows, columns=headers)
-                        st.dataframe(df, use_container_width=True)
-                    else:
+                    if generatedsql.startswith("UPDATE"):
+                        db_manager.execute(generatedsql)
+                        st.success("Update executed!")
+                    else :
+                       headers, rows = db_manager.query(generatedsql)
+                       st.success("Query executed!")
+                       if rows:
+                         import pandas as pd
+                         df = pd.DataFrame(rows, columns=headers)
+                         st.dataframe(df, use_container_width=True)
+                       else:
                         st.info("Query returned no results.")
                 except Exception as e:
                     st.error(f"Query failed: {e}")
