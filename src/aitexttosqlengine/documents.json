@@ -1,0 +1,171 @@
+{
+  "tables": [
+    {
+      "table": "actor",
+      "description": "Stores actor data including first name and last name.",
+      "columns": [
+        {"name": "actor_id", "description": "unique actor identifier (primary key)"},
+        {"name": "first_name", "description": "actor's first name"},
+        {"name": "last_name", "description": "actor's last name"},
+        {"name": "last_update", "description": "timestamp of last row update"}
+      ]
+    },
+    {
+      "table": "film",
+      "description": "Stores film data such as title, release year, length, rating, etc.",
+      "columns": [
+        {"name": "film_id", "description": "unique film identifier (primary key)"},
+        {"name": "title", "description": "film title"},
+        {"name": "description", "description": "short summary of the film"},
+        {"name": "release_year", "description": "year the film was released"},
+        {"name": "language_id", "description": "foreign key to language"},
+        {"name": "rental_duration", "description": "allowed rental duration in days"},
+        {"name": "rental_rate", "description": "cost to rent the film"},
+        {"name": "length", "description": "film duration in minutes"},
+        {"name": "replacement_cost", "description": "cost to replace the film if lost/damaged"},
+        {"name": "rating", "description": "film rating (e.g. G, PG, PG-13, R, NC-17)"},
+        {"name": "last_update", "description": "timestamp of last row update"},
+        {"name": "special_features", "description": "list of special features (trailers, commentaries, etc.)"},
+        {"name": "fulltext", "description": "full-text search field for the film"}
+      ]
+    },
+    {
+      "table": "film_actor",
+      "description": "Stores the relationships between films and actors.",
+      "columns": [
+        {"name": "actor_id", "description": "foreign key to actor"},
+        {"name": "film_id", "description": "foreign key to film"},
+        {"name": "last_update", "description": "timestamp of last row update"}
+      ]
+    },
+    {
+      "table": "category",
+      "description": "Stores film's categories data.",
+      "columns": [
+        {"name": "category_id", "description": "unique category identifier (primary key)"},
+        {"name": "name", "description": "category name"},
+        {"name": "last_update", "description": "timestamp of last row update"}
+      ]
+    },
+    {
+      "table": "film_category",
+      "description": "Stores the relationships between films and categories.",
+      "columns": [
+        {"name": "film_id", "description": "foreign key to film"},
+        {"name": "category_id", "description": "foreign key to category"},
+        {"name": "last_update", "description": "timestamp of last row update"}
+      ]
+    },
+    {
+      "table": "store",
+      "description": "Contains the store data including manager staff and address.",
+      "columns": [
+        {"name": "store_id", "description": "unique store identifier (primary key)"},
+        {"name": "manager_staff_id", "description": "foreign key to staff (store manager)"},
+        {"name": "address_id", "description": "foreign key to address"},
+        {"name": "last_update", "description": "timestamp of last row update"}
+      ]
+    },
+    {
+      "table": "inventory",
+      "description": "Stores inventory data.",
+      "columns": [
+        {"name": "inventory_id", "description": "unique inventory item identifier (primary key)"},
+        {"name": "film_id", "description": "foreign key to film"},
+        {"name": "store_id", "description": "foreign key to store"},
+        {"name": "last_update", "description": "timestamp of last row update"}
+      ]
+    },
+    {
+      "table": "rental",
+      "description": "Stores rental data.",
+      "columns": [
+        {"name": "rental_id", "description": "unique rental identifier (primary key)"},
+        {"name": "rental_date", "description": "date/time the item was rented"},
+        {"name": "inventory_id", "description": "foreign key to inventory"},
+        {"name": "customer_id", "description": "foreign key to customer"},
+        {"name": "return_date", "description": "date/time the item was returned"},
+        {"name": "staff_id", "description": "foreign key to staff who processed the rental"},
+        {"name": "last_update", "description": "timestamp of last row update"}
+      ]
+    },
+    {
+      "table": "payment",
+      "description": "Stores customer's payments.",
+      "columns": [
+        {"name": "payment_id", "description": "unique payment identifier (primary key)"},
+        {"name": "customer_id", "description": "foreign key to customer"},
+        {"name": "staff_id", "description": "foreign key to staff who processed the payment"},
+        {"name": "rental_id", "description": "foreign key to rental"},
+        {"name": "amount", "description": "payment amount"},
+        {"name": "payment_date", "description": "date/time of payment"}
+      ]
+    },
+    {
+      "table": "staff",
+      "description": "Stores staff data.",
+      "columns": [
+        {"name": "staff_id", "description": "unique staff identifier (primary key)"},
+        {"name": "first_name", "description": "staff member's first name"},
+        {"name": "last_name", "description": "staff member's last name"},
+        {"name": "address_id", "description": "foreign key to address"},
+        {"name": "email", "description": "staff member's email"},
+        {"name": "store_id", "description": "foreign key to store"},
+        {"name": "active", "description": "whether the staff member is currently active"},
+        {"name": "username", "description": "login username"},
+        {"name": "password", "description": "login password (hashed)"},
+        {"name": "last_update", "description": "timestamp of last row update"},
+        {"name": "picture", "description": "staff member's photo"}
+      ]
+    },
+    {
+      "table": "customer",
+      "description": "Stores customer data.",
+      "columns": [
+        {"name": "customer_id", "description": "unique customer identifier (primary key)"},
+        {"name": "store_id", "description": "foreign key to store"},
+        {"name": "first_name", "description": "customer's first name"},
+        {"name": "last_name", "description": "customer's last name"},
+        {"name": "email", "description": "customer's email"},
+        {"name": "address_id", "description": "foreign key to address"},
+        {"name": "activebool", "description": "boolean flag for active status"},
+        {"name": "create_date", "description": "date the customer record was created"},
+        {"name": "last_update", "description": "timestamp of last row update"},
+        {"name": "active", "description": "integer flag for active status"}
+      ]
+    },
+    {
+      "table": "address",
+      "description": "Stores address data for staff and customers.",
+      "columns": [
+        {"name": "address_id", "description": "unique address identifier (primary key)"},
+        {"name": "address", "description": "primary address line"},
+        {"name": "address2", "description": "secondary address line"},
+        {"name": "district", "description": "district/region"},
+        {"name": "city_id", "description": "foreign key to city"},
+        {"name": "postal_code", "description": "postal/zip code"},
+        {"name": "phone", "description": "phone number"},
+        {"name": "last_update", "description": "timestamp of last row update"}
+      ]
+    },
+    {
+      "table": "city",
+      "description": "Stores city names.",
+      "columns": [
+        {"name": "city_id", "description": "unique city identifier (primary key)"},
+        {"name": "city", "description": "city name"},
+        {"name": "country_id", "description": "foreign key to country"},
+        {"name": "last_update", "description": "timestamp of last row update"}
+      ]
+    },
+    {
+      "table": "country",
+      "description": "Stores country names.",
+      "columns": [
+        {"name": "country_id", "description": "unique country identifier (primary key)"},
+        {"name": "country", "description": "country name"},
+        {"name": "last_update", "description": "timestamp of last row update"}
+      ]
+    }
+  ]
+}

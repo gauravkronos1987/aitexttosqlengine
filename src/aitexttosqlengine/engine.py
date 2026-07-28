@@ -10,46 +10,9 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_chroma import Chroma
 from langchain.tools import tool
 
+from aitexttosqlengine.documents import DOCUMENTS
+
 load_dotenv()
-
-
-DOCUMENTS = [
-    """
-    Table: customers
-
-    Contains customer information.
-
-    Columns:
-    - customer_id : unique customer identifier
-    - name : customer name
-    - email : customer email
-    - country : customer country
-    """,
-
-    """
-    Table: orders
-
-    Contains purchase orders.
-
-    Columns:
-    - order_id : unique order identifier
-    - customer_id : foreign key to customers
-    - order_date : date of purchase
-    - amount : order value
-    """,
-
-    """
-    Table: products
-
-    Contains product catalog.
-
-    Columns:
-    - product_id : unique product identifier
-    - name : product name
-    - category : product category
-    - price : product price
-    """,
-]
 
 
 class TextToSQLEngine:

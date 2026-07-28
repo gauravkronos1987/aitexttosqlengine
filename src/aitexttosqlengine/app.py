@@ -14,7 +14,7 @@ if openai_key:
 database_url = st.secrets.get("database_url") or os.environ.get("DATABASE_URL")
 if not database_url:
     # fallback used for local testing
-    database_url = "postgresql://user:pswd@localhost:5432/faq"
+    database_url = "postgresql://postgres:postgres@localhost:5432/dvdrental"
 
 engine = TextToSQLEngine()
 db_manager = DatabaseManager(database_url)

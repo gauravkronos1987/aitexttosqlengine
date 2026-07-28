@@ -5,6 +5,7 @@ src/aitexttosqlengine/__main__.py
 src/aitexttosqlengine/app.py
 src/aitexttosqlengine/cli.py
 src/aitexttosqlengine/db.py
+src/aitexttosqlengine/documents.py
 src/aitexttosqlengine/engine.py
 src/aitexttosqlengine.egg-info/PKG-INFO
 src/aitexttosqlengine.egg-info/SOURCES.txt

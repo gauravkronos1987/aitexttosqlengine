@@ -29,7 +29,7 @@ def format_table(headers: Sequence[str], rows: Sequence[tuple]) -> str:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Text-to-SQL engine CLI")
     parser.add_argument("query", nargs="?", help="Natural language question to convert into SQL")
-    parser.add_argument("--dsn", default=os.getenv("DATABASE_URL", "postgresql://user:pswd@localhost:5432/faq"), help="Postgres DSN")
+    parser.add_argument("--dsn", default=os.getenv("DATABASE_URL", "postgresql://postgres:postgres@localhost:5432/dvdrental"), help="Postgres DSN")
     parser.add_argument("--init-db", action="store_true", help="Initialize and seed the Postgres database")
     return parser.parse_args()
 
