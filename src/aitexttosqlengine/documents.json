@@ -17,7 +17,7 @@
         {"name": "film_id", "description": "unique film identifier (primary key)"},
         {"name": "title", "description": "film title"},
         {"name": "description", "description": "short summary of the film"},
-        {"name": "release_year", "description": "year the film was released"},
+        {"name": "release_year", "description": "year the film was released. Stored as a string in YYYY format"},
         {"name": "language_id", "description": "foreign key to language"},
         {"name": "rental_duration", "description": "allowed rental duration in days"},
         {"name": "rental_rate", "description": "cost to rent the film"},

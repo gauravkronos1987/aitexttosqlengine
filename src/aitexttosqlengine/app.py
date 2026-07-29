@@ -7,7 +7,7 @@ from aitexttosqlengine.db import DatabaseManager
 
 # Read secrets from Streamlit's secrets store (or fall back to defaults)
 # Keys in .streamlit/secrets.toml: `open_api_key` and `database_url`.
-openai_key = st.secrets.get("open_api_key")
+openai_key = st.secrets.get("OPENAI_API_KEY")
 if openai_key:
     os.environ.setdefault("OPENAI_API_KEY", openai_key)
 
@@ -36,6 +36,7 @@ if ask:
     else:
         with st.spinner("Processing..."):
             generatedsql = engine.generate_sql(user_input)
+            st.write("**Generated SQL:**",generatedsql)
             if generatedsql:
                 st.write("**Generated SQL:**")
                 st.code(generatedsql, language="sql")
