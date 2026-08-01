@@ -37,7 +37,7 @@ st.set_page_config(page_title="AI SQL Assistant", layout="wide")
 
 page = st.sidebar.radio(
     "Navigation",
-    ["SQL Assistant", "Monitoring Dashboard"],
+    ["SQL Assistant", "Evaluation Dashboard"],
 )
 
 if db_manager is None and page == "SQL Assistant":
@@ -91,9 +91,9 @@ def render_sql_assistant():
 def render_monitoring_dashboard():
     st.title("Evaluation Dashboard")
 
-    if st.button("Run evaluation"):
+    if st.button("Run Retrieval Evaluation"):
         with st.spinner("Running retrieval evaluation..."):
-            from aitexttosqlengine.run_evaluation import run_evaluation
+            from aitexttosqlengine.run_search_evaluation import run_evaluation
 
             run_evaluation()
 
