@@ -2,7 +2,7 @@ from types import SimpleNamespace
 
 import pytest
 
-from aitexttosqlengine.db import DatabaseManager
+from aitexttosqlengine.db import DatabaseManager, resolve_database_url
 
 
 def test_query_returns_headers_and_rows(monkeypatch):
@@ -62,6 +62,14 @@ def test_initialize_schema_uses_documents_json_tables(monkeypatch):
     assert any("CREATE TABLE film" in query for query in executed_queries)
 
 
+def test_resolve_database_url_prefers_explicit_config():
+    class Secrets(dict):
+        pass
+
+    secrets = Secrets({"database_url": "postgresql://cloud:secret@db.example.com:5432/app"})
+    assert resolve_database_url(secrets, {"DATABASE_URL": "postgresql://local:local@localhost:5432/app"}) == "postgresql://cloud:secret@db.example.com:5432/app"
+
+
 def test_seed_data_reads_sql_file(monkeypatch, tmp_path):
     sql_file = tmp_path / "seed.sql"
     sql_file.write_text("INSERT INTO actor VALUES (1);\nINSERT INTO film VALUES (2);", encoding="utf-8")
@@ -87,6 +95,22 @@ def test_seed_data_reads_sql_file(monkeypatch, tmp_path):
     db.seed_data(sql_file)
 
     assert executed_queries == ["INSERT INTO actor VALUES (1)", "INSERT INTO film VALUES (2)"]
+
+
+def test_resolve_seed_sql_path_falls_back_to_repo_file(monkeypatch, tmp_path):
+    repo_root = tmp_path / "repo"
+    repo_root.mkdir()
+    seed_file = repo_root / "export_202607281151.sql"
+    seed_file.write_text("INSERT INTO actor VALUES (1);", encoding="utf-8")
+
+    monkeypatch.chdir(repo_root)
+    monkeypatch.setattr("aitexttosqlengine.db.DEFAULT_SEED_SQL_PATH", seed_file)
+    monkeypatch.setattr("aitexttosqlengine.db.psycopg.connect", lambda dsn, **kwargs: None)
+
+    db = DatabaseManager("postgresql://user:pswd@localhost:5432/faq")
+    resolved = db._resolve_seed_sql_path(None)
+
+    assert resolved == seed_file
 
 
 def test_build_create_statement_includes_comma_separated_columns(monkeypatch):

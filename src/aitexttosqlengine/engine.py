@@ -10,17 +10,18 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_chroma import Chroma
 from langchain.tools import tool
 
-from aitexttosqlengine.documents import DOCUMENTS
+from aitexttosqlengine.documents import DOCUMENT_OBJECTS
+
 
 load_dotenv()
 
 
 class TextToSQLEngine:
     def __init__(self, embedding_model: str = "text-embedding-3-small", llm_model: str = "gpt-5.4-mini", temperature: float = 0.0):
-        self.vectorstore = Chroma.from_texts(
-            texts=DOCUMENTS,
-            embedding=OpenAIEmbeddings(model=embedding_model),
-        )
+        self.vectorstore = Chroma.from_documents(
+           documents=DOCUMENT_OBJECTS,
+           embedding=OpenAIEmbeddings(model="text-embedding-3-small"),
+            )
         self.llm = ChatOpenAI(model_name=llm_model, temperature=temperature)
         self.search_tool = self._build_search_tool()
         self.agent = create_agent(self.llm, tools=[self.search_tool])
@@ -70,9 +71,7 @@ Return only the SQL statement without explanation.
         ]
 
         response = self.agent.invoke({"messages": messages})
-        print(response)
         answer = self._extract_last_ai_message(response)
-        print(answer)
         return self._extract_sql(answer)
 
     def _extract_last_ai_message(self, response: dict[str, Any]) -> str:

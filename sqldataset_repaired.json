@@ -1,0 +1,3216 @@
+[
+  {
+    "question": "Which actors have the last name Smith?",
+    "sql": "SELECT first_name, last_name FROM actor WHERE last_name = 'Smith';",
+    "expected_result": [
+      {
+        "first_name": "",
+        "last_name": ""
+      }
+    ]
+  },
+  {
+    "question": "List all film titles released in 2006 order by title.",
+    "sql": "SELECT title FROM film WHERE release_year = '2006';",
+    "expected_result": [
+      {
+        "title": "Academy Dinosaur"
+      },
+      {
+        "title": "Ace Goldfinger"
+      },
+      {
+        "title": "Adaptation Holes"
+      },
+      {
+        "title": "Affair Prejudice"
+      },
+      {
+        "title": "African Egg"
+      },
+      {
+        "title": "Agent Truman"
+      },
+      {
+        "title": "Airplane Sierra"
+      },
+      {
+        "title": "Airport Pollock"
+      },
+      {
+        "title": "Alabama Devil"
+      },
+      {
+        "title": "Aladdin Calendar"
+      },
+      {
+        "title": "Alamo Videotape"
+      },
+      {
+        "title": "Alaska Phantom"
+      },
+      {
+        "title": "Ali Forever"
+      },
+      {
+        "title": "Alice Fantasia"
+      },
+      {
+        "title": "Alien Center"
+      },
+      {
+        "title": "Alley Evolution"
+      },
+      {
+        "title": "Alone Trip"
+      },
+      {
+        "title": "Alter Victory"
+      },
+      {
+        "title": "Amadeus Holy"
+      },
+      {
+        "title": "Amelie Hellfighters"
+      },
+      {
+        "title": "American Circus"
+      },
+      {
+        "title": "Amistad Midsummer"
+      },
+      {
+        "title": "Anaconda Confessions"
+      },
+      {
+        "title": "Analyze Hoosiers"
+      },
+      {
+        "title": "Angels Life"
+      },
+      {
+        "title": "Annie Identity"
+      },
+      {
+        "title": "Anonymous Human"
+      },
+      {
+        "title": "Anthem Luke"
+      },
+      {
+        "title": "Antitrust Tomatoes"
+      },
+      {
+        "title": "Anything Savannah"
+      },
+      {
+        "title": "Apache Divine"
+      },
+      {
+        "title": "Apocalypse Flamingos"
+      },
+      {
+        "title": "Apollo Teen"
+      },
+      {
+        "title": "Arabia Dogma"
+      },
+      {
+        "title": "Arachnophobia Rollercoaster"
+      },
+      {
+        "title": "Argonauts Town"
+      },
+      {
+        "title": "Arizona Bang"
+      },
+      {
+        "title": "Ark Ridgemont"
+      },
+      {
+        "title": "Armageddon Lost"
+      },
+      {
+        "title": "Army Flintstones"
+      },
+      {
+        "title": "Arsenic Independence"
+      },
+      {
+        "title": "Artist Coldblooded"
+      },
+      {
+        "title": "Atlantis Cause"
+      },
+      {
+        "title": "Attacks Hate"
+      },
+      {
+        "title": "Attraction Newton"
+      },
+      {
+        "title": "Autumn Crow"
+      },
+      {
+        "title": "Baby Hall"
+      },
+      {
+        "title": "Backlash Undefeated"
+      },
+      {
+        "title": "Badman Dawn"
+      },
+      {
+        "title": "Baked Cleopatra"
+      },
+      {
+        "title": "Balloon Homeward"
+      },
+      {
+        "title": "Ballroom Mockingbird"
+      },
+      {
+        "title": "Bang Kwai"
+      },
+      {
+        "title": "Banger Pinocchio"
+      },
+      {
+        "title": "Barbarella Streetcar"
+      },
+      {
+        "title": "Barefoot Manchurian"
+      },
+      {
+        "title": "Basic Easy"
+      },
+      {
+        "title": "Beach Heartbreakers"
+      },
+      {
+        "title": "Bear Graceland"
+      },
+      {
+        "title": "Beast Hunchback"
+      },
+      {
+        "title": "Beauty Grease"
+      },
+      {
+        "title": "Bed Highball"
+      },
+      {
+        "title": "Bedazzled Married"
+      },
+      {
+        "title": "Beethoven Exorcist"
+      },
+      {
+        "title": "Behavior Runaway"
+      },
+      {
+        "title": "Beneath Rush"
+      },
+      {
+        "title": "Berets Agent"
+      },
+      {
+        "title": "Betrayed Rear"
+      },
+      {
+        "title": "Beverly Outlaw"
+      },
+      {
+        "title": "Bikini Borrowers"
+      },
+      {
+        "title": "Bilko Anonymous"
+      },
+      {
+        "title": "Bill Others"
+      },
+      {
+        "title": "Bingo Talented"
+      },
+      {
+        "title": "Birch Antitrust"
+      },
+      {
+        "title": "Bird Independence"
+      },
+      {
+        "title": "Birdcage Casper"
+      },
+      {
+        "title": "Birds Perdition"
+      },
+      {
+        "title": "Blackout Private"
+      },
+      {
+        "title": "Blade Polish"
+      },
+      {
+        "title": "Blanket Beverly"
+      },
+      {
+        "title": "Blindness Gun"
+      },
+      {
+        "title": "Blood Argonauts"
+      },
+      {
+        "title": "Blues Instinct"
+      },
+      {
+        "title": "Boiled Dares"
+      },
+      {
+        "title": "Bonnie Holocaust"
+      },
+      {
+        "title": "Boogie Amelie"
+      },
+      {
+        "title": "Boondock Ballroom"
+      },
+      {
+        "title": "Born Spinal"
+      },
+      {
+        "title": "Borrowers Bedazzled"
+      },
+      {
+        "title": "Boulevard Mob"
+      },
+      {
+        "title": "Bound Cheaper"
+      },
+      {
+        "title": "Bowfinger Gables"
+      },
+      {
+        "title": "Brannigan Sunrise"
+      },
+      {
+        "title": "Braveheart Human"
+      },
+      {
+        "title": "Breakfast Goldfinger"
+      },
+      {
+        "title": "Breaking Home"
+      },
+      {
+        "title": "Bride Intrigue"
+      },
+      {
+        "title": "Bright Encounters"
+      },
+      {
+        "title": "Bringing Hysterical"
+      },
+      {
+        "title": "Brooklyn Desert"
+      },
+      {
+        "title": "Brotherhood Blanket"
+      },
+      {
+        "title": "Bubble Grosse"
+      },
+      {
+        "title": "Bucket Brotherhood"
+      },
+      {
+        "title": "Bugsy Song"
+      },
+      {
+        "title": "Bull Shawshank"
+      },
+      {
+        "title": "Bulworth Commandments"
+      },
+      {
+        "title": "Bunch Minds"
+      },
+      {
+        "title": "Butch Panther"
+      },
+      {
+        "title": "Butterfly Chocolat"
+      },
+      {
+        "title": "Cabin Flash"
+      },
+      {
+        "title": "Caddyshack Jedi"
+      },
+      {
+        "title": "Calendar Gunfight"
+      },
+      {
+        "title": "California Birds"
+      },
+      {
+        "title": "Camelot Vacation"
+      },
+      {
+        "title": "Campus Remember"
+      },
+      {
+        "title": "Candidate Perdition"
+      },
+      {
+        "title": "Candles Grapes"
+      },
+      {
+        "title": "Canyon Stock"
+      },
+      {
+        "title": "Caper Motions"
+      },
+      {
+        "title": "Caribbean Liberty"
+      },
+      {
+        "title": "Carol Texas"
+      },
+      {
+        "title": "Carrie Bunch"
+      },
+      {
+        "title": "Casablanca Super"
+      },
+      {
+        "title": "Casper Dragonfly"
+      },
+      {
+        "title": "Cassidy Wyoming"
+      },
+      {
+        "title": "Casualties Encino"
+      },
+      {
+        "title": "Cat Coneheads"
+      },
+      {
+        "title": "Catch Amistad"
+      },
+      {
+        "title": "Cause Date"
+      },
+      {
+        "title": "Celebrity Horn"
+      },
+      {
+        "title": "Center Dinosaur"
+      },
+      {
+        "title": "Chainsaw Uptown"
+      },
+      {
+        "title": "Chamber Italian"
+      },
+      {
+        "title": "Champion Flatliners"
+      },
+      {
+        "title": "Chance Resurrection"
+      },
+      {
+        "title": "Chaplin License"
+      },
+      {
+        "title": "Charade Duffel"
+      },
+      {
+        "title": "Chariots Conspiracy"
+      },
+      {
+        "title": "Chasing Fight"
+      },
+      {
+        "title": "Cheaper Clyde"
+      },
+      {
+        "title": "Chicago North"
+      },
+      {
+        "title": "Chicken Hellfighters"
+      },
+      {
+        "title": "Chill Luck"
+      },
+      {
+        "title": "Chinatown Gladiator"
+      },
+      {
+        "title": "Chisum Behavior"
+      },
+      {
+        "title": "Chitty Lock"
+      },
+      {
+        "title": "Chocolat Harry"
+      },
+      {
+        "title": "Chocolate Duck"
+      },
+      {
+        "title": "Christmas Moonshine"
+      },
+      {
+        "title": "Cider Desire"
+      },
+      {
+        "title": "Cincinatti Whisperer"
+      },
+      {
+        "title": "Circus Youth"
+      },
+      {
+        "title": "Citizen Shrek"
+      },
+      {
+        "title": "Clash Freddy"
+      },
+      {
+        "title": "Cleopatra Devil"
+      },
+      {
+        "title": "Clerks Angels"
+      },
+      {
+        "title": "Clockwork Paradise"
+      },
+      {
+        "title": "Clones Pinocchio"
+      },
+      {
+        "title": "Closer Bang"
+      },
+      {
+        "title": "Club Graffiti"
+      },
+      {
+        "title": "Clue Grail"
+      },
+      {
+        "title": "Clueless Bucket"
+      },
+      {
+        "title": "Clyde Theory"
+      },
+      {
+        "title": "Coast Rainbow"
+      },
+      {
+        "title": "Coldblooded Darling"
+      },
+      {
+        "title": "Color Philadelphia"
+      },
+      {
+        "title": "Coma Head"
+      },
+      {
+        "title": "Comancheros Enemy"
+      },
+      {
+        "title": "Comforts Rush"
+      },
+      {
+        "title": "Command Darling"
+      },
+      {
+        "title": "Commandments Express"
+      },
+      {
+        "title": "Coneheads Smoochy"
+      },
+      {
+        "title": "Confessions Maguire"
+      },
+      {
+        "title": "Confidential Interview"
+      },
+      {
+        "title": "Confused Candles"
+      },
+      {
+        "title": "Congeniality Quest"
+      },
+      {
+        "title": "Connecticut Tramp"
+      },
+      {
+        "title": "Connection Microcosmos"
+      },
+      {
+        "title": "Conquerer Nuts"
+      },
+      {
+        "title": "Conspiracy Spirit"
+      },
+      {
+        "title": "Contact Anonymous"
+      },
+      {
+        "title": "Control Anthem"
+      },
+      {
+        "title": "Conversation Downhill"
+      },
+      {
+        "title": "Core Suit"
+      },
+      {
+        "title": "Cowboy Doom"
+      },
+      {
+        "title": "Craft Outfield"
+      },
+      {
+        "title": "Cranes Reservoir"
+      },
+      {
+        "title": "Crazy Home"
+      },
+      {
+        "title": "Creatures Shakespeare"
+      },
+      {
+        "title": "Creepers Kane"
+      },
+      {
+        "title": "Crooked Frogmen"
+      },
+      {
+        "title": "Crossing Divorce"
+      },
+      {
+        "title": "Crossroads Casualties"
+      },
+      {
+        "title": "Crow Grease"
+      },
+      {
+        "title": "Crowds Telemark"
+      },
+      {
+        "title": "Cruelty Unforgiven"
+      },
+      {
+        "title": "Crusade Honey"
+      },
+      {
+        "title": "Crystal Breaking"
+      },
+      {
+        "title": "Cupboard Sinners"
+      },
+      {
+        "title": "Curtain Videotape"
+      }
+    ]
+  },
+  {
+    "question": "Show the films with a rental rate above 4.99.",
+    "sql": "SELECT title, rental_rate FROM film WHERE rental_rate::numeric > 4.99;",
+    "expected_result": [
+      {
+        "title": "",
+        "rental_rate": ""
+      }
+    ]
+  },
+  {
+    "question": "Which films are longer than 180 minutes?",
+    "sql": "SELECT title FROM film WHERE length::numeric > 180;",
+    "expected_result": [
+      {
+        "title": "Analyze Hoosiers"
+      },
+      {
+        "title": "Baked Cleopatra"
+      },
+      {
+        "title": "Catch Amistad"
+      },
+      {
+        "title": "Chicago North"
+      },
+      {
+        "title": "Conspiracy Spirit"
+      },
+      {
+        "title": "Control Anthem"
+      },
+      {
+        "title": "Crystal Breaking"
+      },
+      {
+        "title": "Darn Forrester"
+      },
+      {
+        "title": "Frontier Cabin"
+      },
+      {
+        "title": "Gangs Pride"
+      },
+      {
+        "title": "Haunting Pianist"
+      },
+      {
+        "title": "Home Pity"
+      },
+      {
+        "title": "Hotel Happiness"
+      },
+      {
+        "title": "Intrigue Worst"
+      },
+      {
+        "title": "Jacket Frisco"
+      },
+      {
+        "title": "King Evolution"
+      },
+      {
+        "title": "Lawless Vision"
+      },
+      {
+        "title": "Love Suicides"
+      },
+      {
+        "title": "Monsoon Cause"
+      },
+      {
+        "title": "Moonwalker Fool"
+      },
+      {
+        "title": "Muscle Bright"
+      },
+      {
+        "title": "Pond Seattle"
+      },
+      {
+        "title": "Records Zorro"
+      },
+      {
+        "title": "Reds Pocus"
+      },
+      {
+        "title": "Runaway Tenenbaums"
+      },
+      {
+        "title": "Saturn Name"
+      },
+      {
+        "title": "Scalawag Duck"
+      },
+      {
+        "title": "Searchers Wait"
+      },
+      {
+        "title": "Smoochy Control"
+      },
+      {
+        "title": "Soldiers Evolution"
+      },
+      {
+        "title": "Sons Interview"
+      },
+      {
+        "title": "Sorority Queen"
+      },
+      {
+        "title": "Star Operation"
+      },
+      {
+        "title": "Sweet Brotherhood"
+      },
+      {
+        "title": "Theory Mermaid"
+      },
+      {
+        "title": "Wife Turn"
+      },
+      {
+        "title": "Wild Apollo"
+      },
+      {
+        "title": "Worst Banger"
+      },
+      {
+        "title": "Young Language"
+      }
+    ]
+  },
+  {
+    "question": "What are the titles of all films rated PG-13?",
+    "sql": "SELECT first_name, last_name FROM actor WHERE last_name = 'Smith';",
+    "expected_result": [
+      {
+        "title": "Bright Encounters"
+      },
+      {
+        "title": "Airplane Sierra"
+      },
+      {
+        "title": "Alabama Devil"
+      },
+      {
+        "title": "Alter Victory"
+      },
+      {
+        "title": "Anthem Luke"
+      },
+      {
+        "title": "Apollo Teen"
+      },
+      {
+        "title": "Arachnophobia Rollercoaster"
+      },
+      {
+        "title": "Argonauts Town"
+      },
+      {
+        "title": "Attacks Hate"
+      },
+      {
+        "title": "Attraction Newton"
+      },
+      {
+        "title": "Backlash Undefeated"
+      },
+      {
+        "title": "Basic Easy"
+      },
+      {
+        "title": "Beethoven Exorcist"
+      },
+      {
+        "title": "Berets Agent"
+      },
+      {
+        "title": "Bilko Anonymous"
+      },
+      {
+        "title": "Bingo Talented"
+      },
+      {
+        "title": "Blade Polish"
+      },
+      {
+        "title": "Blindness Gun"
+      },
+      {
+        "title": "Braveheart Human"
+      },
+      {
+        "title": "Breaking Home"
+      },
+      {
+        "title": "Butch Panther"
+      },
+      {
+        "title": "Casper Dragonfly"
+      },
+      {
+        "title": "Celebrity Horn"
+      },
+      {
+        "title": "Chicago North"
+      },
+      {
+        "title": "Circus Youth"
+      },
+      {
+        "title": "Cleopatra Devil"
+      },
+      {
+        "title": "Clockwork Paradise"
+      },
+      {
+        "title": "Club Graffiti"
+      },
+      {
+        "title": "Clyde Theory"
+      },
+      {
+        "title": "Core Suit"
+      },
+      {
+        "title": "Command Darling"
+      },
+      {
+        "title": "Confessions Maguire"
+      },
+      {
+        "title": "Confused Candles"
+      },
+      {
+        "title": "Congeniality Quest"
+      },
+      {
+        "title": "Conspiracy Spirit"
+      },
+      {
+        "title": "Contact Anonymous"
+      },
+      {
+        "title": "Crooked Frogmen"
+      },
+      {
+        "title": "Curtain Videotape"
+      },
+      {
+        "title": "Dares Pluto"
+      },
+      {
+        "title": "Darling Breaking"
+      },
+      {
+        "title": "Daughter Madigan"
+      },
+      {
+        "title": "Deep Crusade"
+      },
+      {
+        "title": "Destination Jerk"
+      },
+      {
+        "title": "Detective Vision"
+      },
+      {
+        "title": "Divide Monster"
+      },
+      {
+        "title": "Dolls Rage"
+      },
+      {
+        "title": "Drifter Commandments"
+      },
+      {
+        "title": "Driver Annie"
+      },
+      {
+        "title": "Dynamite Tarzan"
+      },
+      {
+        "title": "Elephant Trojan"
+      },
+      {
+        "title": "English Bulworth"
+      },
+      {
+        "title": "Evolution Alter"
+      },
+      {
+        "title": "Expecations Natural"
+      },
+      {
+        "title": "Eyes Driving"
+      },
+      {
+        "title": "Factory Dragon"
+      },
+      {
+        "title": "Falcon Volume"
+      },
+      {
+        "title": "Fantasy Troopers"
+      },
+      {
+        "title": "Feathers Metal"
+      },
+      {
+        "title": "Flamingos Connecticut"
+      },
+      {
+        "title": "Flintstones Happiness"
+      },
+      {
+        "title": "Floats Garden"
+      },
+      {
+        "title": "Freedom Cleopatra"
+      },
+      {
+        "title": "Frontier Cabin"
+      },
+      {
+        "title": "Fury Murder"
+      },
+      {
+        "title": "Games Bowfinger"
+      },
+      {
+        "title": "Gandhi Kwai"
+      },
+      {
+        "title": "Gangs Pride"
+      },
+      {
+        "title": "Gathering Calendar"
+      },
+      {
+        "title": "Glory Tracy"
+      },
+      {
+        "title": "Groundhog Uncut"
+      },
+      {
+        "title": "Gunfighter Mussolini"
+      },
+      {
+        "title": "Half Outfield"
+      },
+      {
+        "title": "Halloween Nuts"
+      },
+      {
+        "title": "Identity Lover"
+      },
+      {
+        "title": "Harry Idaho"
+      },
+      {
+        "title": "Hawk Chill"
+      },
+      {
+        "title": "Hobbit Alien"
+      },
+      {
+        "title": "Holiday Games"
+      },
+      {
+        "title": "Homicide Peach"
+      },
+      {
+        "title": "Hotel Happiness"
+      },
+      {
+        "title": "Hunchback Impossible"
+      },
+      {
+        "title": "Hunter Alter"
+      },
+      {
+        "title": "Idaho Love"
+      },
+      {
+        "title": "Image Princess"
+      },
+      {
+        "title": "Impact Aladdin"
+      },
+      {
+        "title": "Innocent Usual"
+      },
+      {
+        "title": "Intentions Empire"
+      },
+      {
+        "title": "Intolerable Intentions"
+      },
+      {
+        "title": "Jacket Frisco"
+      },
+      {
+        "title": "Jingle Sagebrush"
+      },
+      {
+        "title": "Juggler Hardly"
+      },
+      {
+        "title": "Karate Moon"
+      },
+      {
+        "title": "Kick Savannah"
+      },
+      {
+        "title": "Kiss Glory"
+      },
+      {
+        "title": "Knock Warlock"
+      },
+      {
+        "title": "Kwai Homeward"
+      },
+      {
+        "title": "Labyrinth League"
+      },
+      {
+        "title": "Lambs Cincinatti"
+      },
+      {
+        "title": "League Hellfighters"
+      },
+      {
+        "title": "Leathernecks Dwarfs"
+      },
+      {
+        "title": "Lebowski Soldiers"
+      },
+      {
+        "title": "Lord Arizona"
+      },
+      {
+        "title": "Lost Bird"
+      },
+      {
+        "title": "Louisiana Harry"
+      },
+      {
+        "title": "Loverboy Attacks"
+      },
+      {
+        "title": "Lucky Flying"
+      },
+      {
+        "title": "Madness Attacks"
+      },
+      {
+        "title": "Madre Gables"
+      },
+      {
+        "title": "Magnolia Forrester"
+      },
+      {
+        "title": "Maker Gables"
+      },
+      {
+        "title": "Maltese Hope"
+      },
+      {
+        "title": "Miracle Virtual"
+      },
+      {
+        "title": "Mannequin Worst"
+      },
+      {
+        "title": "Masked Bubble"
+      },
+      {
+        "title": "Matrix Snowman"
+      },
+      {
+        "title": "Metal Armageddon"
+      },
+      {
+        "title": "Metropolis Coma"
+      },
+      {
+        "title": "Microcosmos Paradise"
+      },
+      {
+        "title": "Million Ace"
+      },
+      {
+        "title": "Minds Truman"
+      },
+      {
+        "title": "Mine Titans"
+      },
+      {
+        "title": "Mission Zoolander"
+      },
+      {
+        "title": "Mixed Doors"
+      },
+      {
+        "title": "Moonshine Cabin"
+      },
+      {
+        "title": "Moulin Wake"
+      },
+      {
+        "title": "Name Detective"
+      },
+      {
+        "title": "Nash Chocolat"
+      },
+      {
+        "title": "Natural Stock"
+      },
+      {
+        "title": "Network Peak"
+      },
+      {
+        "title": "Notting Speakeasy"
+      },
+      {
+        "title": "October Submarine"
+      },
+      {
+        "title": "Orange Grapes"
+      },
+      {
+        "title": "Order Betrayed"
+      },
+      {
+        "title": "Outlaw Hanky"
+      },
+      {
+        "title": "Packer Madigan"
+      },
+      {
+        "title": "Paradise Sabrina"
+      },
+      {
+        "title": "Paris Weekend"
+      },
+      {
+        "title": "Park Citizen"
+      },
+      {
+        "title": "Past Suicides"
+      },
+      {
+        "title": "Paycheck Wait"
+      },
+      {
+        "title": "Peach Innocent"
+      },
+      {
+        "title": "Perfect Groove"
+      },
+      {
+        "title": "Personal Ladybugs"
+      },
+      {
+        "title": "Philadelphia Wife"
+      },
+      {
+        "title": "Pittsburgh Hunchback"
+      },
+      {
+        "title": "Platoon Instinct"
+      },
+      {
+        "title": "Pond Seattle"
+      },
+      {
+        "title": "Poseidon Forever"
+      },
+      {
+        "title": "Prejudice Oleander"
+      },
+      {
+        "title": "Psycho Shrunk"
+      },
+      {
+        "title": "Raiders Antitrust"
+      },
+      {
+        "title": "Reap Unfaithful"
+      },
+      {
+        "title": "Reds Pocus"
+      },
+      {
+        "title": "Reign Gentlemen"
+      },
+      {
+        "title": "Reservoir Adaptation"
+      },
+      {
+        "title": "Ridgemont Submarine"
+      },
+      {
+        "title": "Right Cranes"
+      },
+      {
+        "title": "River Outlaw"
+      },
+      {
+        "title": "Robbers Joon"
+      },
+      {
+        "title": "Rocketeer Mother"
+      },
+      {
+        "title": "Rocky War"
+      },
+      {
+        "title": "Rollercoaster Bringing"
+      },
+      {
+        "title": "Roots Remember"
+      },
+      {
+        "title": "Roses Treasure"
+      },
+      {
+        "title": "Rugrats Shakespeare"
+      },
+      {
+        "title": "Rushmore Mermaid"
+      },
+      {
+        "title": "Saddle Antitrust"
+      },
+      {
+        "title": "Savannah Town"
+      },
+      {
+        "title": "Scarface Bang"
+      },
+      {
+        "title": "School Jacket"
+      },
+      {
+        "title": "Seattle Expecations"
+      },
+      {
+        "title": "Shakespeare Saddle"
+      },
+      {
+        "title": "Shock Cabin"
+      },
+      {
+        "title": "Shootist Superfly"
+      },
+      {
+        "title": "Show Lord"
+      },
+      {
+        "title": "Shrek License"
+      },
+      {
+        "title": "Sinners Atlantis"
+      },
+      {
+        "title": "Sister Freddy"
+      },
+      {
+        "title": "Sleeping Suspects"
+      },
+      {
+        "title": "Slipper Fidelity"
+      },
+      {
+        "title": "Smoking Barbarella"
+      },
+      {
+        "title": "Snatchers Montezuma"
+      },
+      {
+        "title": "Song Hedwig"
+      },
+      {
+        "title": "Speakeasy Date"
+      },
+      {
+        "title": "Speed Suit"
+      },
+      {
+        "title": "Spinal Rocky"
+      },
+      {
+        "title": "Spirited Casualties"
+      },
+      {
+        "title": "Spy Mile"
+      },
+      {
+        "title": "Stallion Sundance"
+      },
+      {
+        "title": "Streak Ridgemont"
+      },
+      {
+        "title": "Strictly Scarface"
+      },
+      {
+        "title": "Sunrise League"
+      },
+      {
+        "title": "Swarm Gold"
+      },
+      {
+        "title": "Tarzan Videotape"
+      },
+      {
+        "title": "Taxi Kick"
+      },
+      {
+        "title": "Telemark Heartbreakers"
+      },
+      {
+        "title": "Tenenbaums Command"
+      },
+      {
+        "title": "Theory Mermaid"
+      },
+      {
+        "title": "Thief Pelican"
+      },
+      {
+        "title": "Thin Sagebrush"
+      },
+      {
+        "title": "Tourist Pelican"
+      },
+      {
+        "title": "Trainspotting Strangers"
+      },
+      {
+        "title": "Translation Summer"
+      },
+      {
+        "title": "Treasure Command"
+      },
+      {
+        "title": "Trip Newton"
+      },
+      {
+        "title": "Uncut Suicides"
+      },
+      {
+        "title": "Undefeated Dalmations"
+      },
+      {
+        "title": "Usual Untouchables"
+      },
+      {
+        "title": "Valentine Vanishing"
+      },
+      {
+        "title": "Victory Academy"
+      },
+      {
+        "title": "Vietnam Smoochy"
+      },
+      {
+        "title": "Villain Desperate"
+      },
+      {
+        "title": "Virgin Daisy"
+      },
+      {
+        "title": "Vision Torque"
+      },
+      {
+        "title": "Voice Peach"
+      },
+      {
+        "title": "Voyage Legally"
+      },
+      {
+        "title": "Wait Cider"
+      },
+      {
+        "title": "Wanda Chamber"
+      },
+      {
+        "title": "Whale Bikini"
+      },
+      {
+        "title": "Whisperer Giant"
+      },
+      {
+        "title": "World Leathernecks"
+      },
+      {
+        "title": "Wrong Behavior"
+      },
+      {
+        "title": "Wyoming Storm"
+      }
+    ]
+  },
+  {
+    "question": "How many films are there in the catalog?",
+    "sql": "SELECT COUNT(*) AS film_count FROM film;",
+    "expected_result": [
+      {
+        "film_count": "1000"
+      }
+    ]
+  },
+  {
+    "question": "What is the average rental rate of all films?",
+    "sql": "SELECT AVG(rental_rate::numeric) AS average_rental_rate FROM film;",
+    "expected_result": [
+      {
+        "average_rental_rate": "2.98"
+      }
+    ]
+  },
+  {
+    "question": "Which film has the highest replacement cost?",
+    "sql": "SELECT title FROM film ORDER BY replacement_cost DESC LIMIT 1;",
+    "expected_result": [
+      {
+        "title": "Anaconda Confessions"
+      }
+    ]
+  },
+  {
+    "question": "Which film has the shortest length?",
+    "sql": "SELECT title FROM film ORDER BY length::integer ASC, title ASC LIMIT 1;",
+    "expected_result": [
+      {
+        "title": "Alien Center"
+      }
+    ]
+  },
+  {
+    "question": "List the top 10 longest films by runtime.",
+    "sql": "SELECT title FROM film ORDER BY length::integer ASC, title ASC LIMIT 1;",
+    "expected_result": [
+      {
+        "title": "Chicago North",
+        "length": 185
+      },
+      {
+        "title": "Control Anthem",
+        "length": 185
+      },
+      {
+        "title": "Darn Forrester",
+        "length": 185
+      },
+      {
+        "title": "Gangs Pride",
+        "length": 185
+      },
+      {
+        "title": "Home Pity",
+        "length": 185
+      },
+      {
+        "title": "Muscle Bright",
+        "length": 185
+      },
+      {
+        "title": "Pond Seattle",
+        "length": 185
+      },
+      {
+        "title": "Soldiers Evolution",
+        "length": 185
+      },
+      {
+        "title": "Sweet Brotherhood",
+        "length": 185
+      },
+      {
+        "title": "Worst Banger",
+        "length": 185
+      }
+    ]
+  },
+  {
+    "question": "How many actors are in the database?",
+    "sql": "SELECT COUNT(*) AS actor_count FROM public.actor;",
+    "expected_result": [
+      {
+        "actor_count": "200"
+      }
+    ]
+  },
+  {
+    "question": "Which actors appeared in the film Academy Dinosaur?",
+    "sql": "SELECT a.first_name, a.last_name FROM actor a JOIN film_actor fa ON a.actor_id = fa.actor_id JOIN film f ON fa.film_id = f.film_id WHERE f.title = 'Academy Dinosaur';",
+    "expected_result": [
+      {
+        "first_name": "Gary",
+        "last_name": "Phoenix"
+      },
+      {
+        "first_name": "Dustin",
+        "last_name": "Tautou"
+      },
+      {
+        "first_name": "Walter",
+        "last_name": "Torn"
+      },
+      {
+        "first_name": "Matthew",
+        "last_name": "Carrey"
+      },
+      {
+        "first_name": "Thora",
+        "last_name": "Temple"
+      }
+    ]
+  },
+  {
+    "question": "Which films feature actor Nick Wahlberg?",
+    "sql": "SELECT f.title FROM film f JOIN film_actor fa ON f.film_id = fa.film_id JOIN actor a ON fa.actor_id = a.actor_id WHERE a.first_name = 'Nick' AND a.last_name = 'Wahlberg';",
+    "expected_result": [
+      {
+        "title": "Airport Pollock"
+      },
+      {
+        "title": "Anonymous Human"
+      },
+      {
+        "title": "Dying Maker"
+      },
+      {
+        "title": "Brooklyn Desert"
+      },
+      {
+        "title": "Catch Amistad"
+      },
+      {
+        "title": "Chicago North"
+      },
+      {
+        "title": "Desperate Trainspotting"
+      },
+      {
+        "title": "Downhill Enough"
+      },
+      {
+        "title": "Fidelity Devil"
+      },
+      {
+        "title": "Flamingos Connecticut"
+      },
+      {
+        "title": "Giant Troopers"
+      },
+      {
+        "title": "Gone Trouble"
+      },
+      {
+        "title": "Hanover Galaxy"
+      },
+      {
+        "title": "Indian Love"
+      },
+      {
+        "title": "Jekyll Frogmen"
+      },
+      {
+        "title": "Jersey Sassy"
+      },
+      {
+        "title": "Lesson Cleopatra"
+      },
+      {
+        "title": "Loverboy Attacks"
+      },
+      {
+        "title": "Magic Mallrats"
+      },
+      {
+        "title": "Majestic Floats"
+      },
+      {
+        "title": "Mannequin Worst"
+      },
+      {
+        "title": "Roman Punk"
+      },
+      {
+        "title": "Rushmore Mermaid"
+      },
+      {
+        "title": "Smile Earring"
+      },
+      {
+        "title": "Wardrobe Phantom"
+      }
+    ]
+  },
+  {
+    "question": "How many films has each actor appeared in?",
+    "sql": "SELECT a.actor_id, a.first_name, a.last_name, COUNT(fa.film_id) AS film_count FROM actor a LEFT JOIN film_actor fa ON a.actor_id = fa.actor_id GROUP BY a.actor_id, a.first_name, a.last_name ORDER BY a.actor_id;",
+    "expected_result": [
+      {
+        "actor_id": 1,
+        "first_name": "Penelope",
+        "last_name": "Guiness",
+        "film_count": 19
+      },
+      {
+        "actor_id": 2,
+        "first_name": "Nick",
+        "last_name": "Wahlberg",
+        "film_count": 25
+      },
+      {
+        "actor_id": 3,
+        "first_name": "Ed",
+        "last_name": "Chase",
+        "film_count": 22
+      },
+      {
+        "actor_id": 4,
+        "first_name": "Jennifer",
+        "last_name": "Davis",
+        "film_count": 22
+      },
+      {
+        "actor_id": 5,
+        "first_name": "Johnny",
+        "last_name": "Lollobrigida",
+        "film_count": 29
+      },
+      {
+        "actor_id": 6,
+        "first_name": "Bette",
+        "last_name": "Nicholson",
+        "film_count": 20
+      },
+      {
+        "actor_id": 7,
+        "first_name": "Grace",
+        "last_name": "Mostel",
+        "film_count": 30
+      },
+      {
+        "actor_id": 8,
+        "first_name": "Matthew",
+        "last_name": "Johansson",
+        "film_count": 20
+      },
+      {
+        "actor_id": 9,
+        "first_name": "Joe",
+        "last_name": "Swank",
+        "film_count": 25
+      },
+      {
+        "actor_id": 10,
+        "first_name": "Christian",
+        "last_name": "Gable",
+        "film_count": 22
+      },
+      {
+        "actor_id": 11,
+        "first_name": "Zero",
+        "last_name": "Cage",
+        "film_count": 25
+      },
+      {
+        "actor_id": 12,
+        "first_name": "Karl",
+        "last_name": "Berry",
+        "film_count": 31
+      },
+      {
+        "actor_id": 13,
+        "first_name": "Uma",
+        "last_name": "Wood",
+        "film_count": 35
+      },
+      {
+        "actor_id": 14,
+        "first_name": "Vivien",
+        "last_name": "Bergen",
+        "film_count": 30
+      },
+      {
+        "actor_id": 15,
+        "first_name": "Cuba",
+        "last_name": "Olivier",
+        "film_count": 28
+      },
+      {
+        "actor_id": 16,
+        "first_name": "Fred",
+        "last_name": "Costner",
+        "film_count": 27
+      },
+      {
+        "actor_id": 17,
+        "first_name": "Helen",
+        "last_name": "Voight",
+        "film_count": 32
+      },
+      {
+        "actor_id": 18,
+        "first_name": "Dan",
+        "last_name": "Torn",
+        "film_count": 22
+      },
+      {
+        "actor_id": 19,
+        "first_name": "Bob",
+        "last_name": "Fawcett",
+        "film_count": 25
+      },
+      {
+        "actor_id": 20,
+        "first_name": "Lucille",
+        "last_name": "Tracy",
+        "film_count": 30
+      },
+      {
+        "actor_id": 21,
+        "first_name": "Kirsten",
+        "last_name": "Paltrow",
+        "film_count": 27
+      },
+      {
+        "actor_id": 22,
+        "first_name": "Elvis",
+        "last_name": "Marx",
+        "film_count": 26
+      },
+      {
+        "actor_id": 23,
+        "first_name": "Sandra",
+        "last_name": "Kilmer",
+        "film_count": 37
+      },
+      {
+        "actor_id": 24,
+        "first_name": "Cameron",
+        "last_name": "Streep",
+        "film_count": 24
+      },
+      {
+        "actor_id": 25,
+        "first_name": "Kevin",
+        "last_name": "Bloom",
+        "film_count": 21
+      },
+      {
+        "actor_id": 26,
+        "first_name": "Rip",
+        "last_name": "Crawford",
+        "film_count": 33
+      },
+      {
+        "actor_id": 27,
+        "first_name": "Julia",
+        "last_name": "Mcqueen",
+        "film_count": 33
+      },
+      {
+        "actor_id": 28,
+        "first_name": "Woody",
+        "last_name": "Hoffman",
+        "film_count": 31
+      },
+      {
+        "actor_id": 29,
+        "first_name": "Alec",
+        "last_name": "Wayne",
+        "film_count": 29
+      },
+      {
+        "actor_id": 30,
+        "first_name": "Sandra",
+        "last_name": "Peck",
+        "film_count": 19
+      },
+      {
+        "actor_id": 31,
+        "first_name": "Sissy",
+        "last_name": "Sobieski",
+        "film_count": 18
+      },
+      {
+        "actor_id": 32,
+        "first_name": "Tim",
+        "last_name": "Hackman",
+        "film_count": 23
+      },
+      {
+        "actor_id": 33,
+        "first_name": "Milla",
+        "last_name": "Peck",
+        "film_count": 24
+      },
+      {
+        "actor_id": 34,
+        "first_name": "Audrey",
+        "last_name": "Olivier",
+        "film_count": 25
+      },
+      {
+        "actor_id": 35,
+        "first_name": "Judy",
+        "last_name": "Dean",
+        "film_count": 15
+      },
+      {
+        "actor_id": 36,
+        "first_name": "Burt",
+        "last_name": "Dukakis",
+        "film_count": 29
+      },
+      {
+        "actor_id": 37,
+        "first_name": "Val",
+        "last_name": "Bolger",
+        "film_count": 35
+      },
+      {
+        "actor_id": 38,
+        "first_name": "Tom",
+        "last_name": "Mckellen",
+        "film_count": 25
+      },
+      {
+        "actor_id": 39,
+        "first_name": "Goldie",
+        "last_name": "Brody",
+        "film_count": 28
+      },
+      {
+        "actor_id": 40,
+        "first_name": "Johnny",
+        "last_name": "Cage",
+        "film_count": 29
+      },
+      {
+        "actor_id": 41,
+        "first_name": "Jodie",
+        "last_name": "Degeneres",
+        "film_count": 29
+      },
+      {
+        "actor_id": 42,
+        "first_name": "Tom",
+        "last_name": "Miranda",
+        "film_count": 27
+      },
+      {
+        "actor_id": 43,
+        "first_name": "Kirk",
+        "last_name": "Jovovich",
+        "film_count": 26
+      },
+      {
+        "actor_id": 44,
+        "first_name": "Nick",
+        "last_name": "Stallone",
+        "film_count": 30
+      },
+      {
+        "actor_id": 45,
+        "first_name": "Reese",
+        "last_name": "Kilmer",
+        "film_count": 32
+      },
+      {
+        "actor_id": 46,
+        "first_name": "Parker",
+        "last_name": "Goldberg",
+        "film_count": 24
+      },
+      {
+        "actor_id": 47,
+        "first_name": "Julia",
+        "last_name": "Barrymore",
+        "film_count": 24
+      },
+      {
+        "actor_id": 48,
+        "first_name": "Frances",
+        "last_name": "Day-Lewis",
+        "film_count": 26
+      },
+      {
+        "actor_id": 49,
+        "first_name": "Anne",
+        "last_name": "Cronyn",
+        "film_count": 27
+      },
+      {
+        "actor_id": 50,
+        "first_name": "Natalie",
+        "last_name": "Hopkins",
+        "film_count": 32
+      },
+      {
+        "actor_id": 51,
+        "first_name": "Gary",
+        "last_name": "Phoenix",
+        "film_count": 25
+      },
+      {
+        "actor_id": 52,
+        "first_name": "Carmen",
+        "last_name": "Hunt",
+        "film_count": 26
+      },
+      {
+        "actor_id": 53,
+        "first_name": "Mena",
+        "last_name": "Temple",
+        "film_count": 30
+      },
+      {
+        "actor_id": 54,
+        "first_name": "Penelope",
+        "last_name": "Pinkett",
+        "film_count": 25
+      },
+      {
+        "actor_id": 55,
+        "first_name": "Fay",
+        "last_name": "Kilmer",
+        "film_count": 20
+      },
+      {
+        "actor_id": 56,
+        "first_name": "Dan",
+        "last_name": "Harris",
+        "film_count": 28
+      },
+      {
+        "actor_id": 57,
+        "first_name": "Jude",
+        "last_name": "Cruise",
+        "film_count": 30
+      },
+      {
+        "actor_id": 58,
+        "first_name": "Christian",
+        "last_name": "Akroyd",
+        "film_count": 32
+      },
+      {
+        "actor_id": 59,
+        "first_name": "Dustin",
+        "last_name": "Tautou",
+        "film_count": 27
+      },
+      {
+        "actor_id": 60,
+        "first_name": "Henry",
+        "last_name": "Berry",
+        "film_count": 35
+      },
+      {
+        "actor_id": 61,
+        "first_name": "Christian",
+        "last_name": "Neeson",
+        "film_count": 25
+      },
+      {
+        "actor_id": 62,
+        "first_name": "Jayne",
+        "last_name": "Neeson",
+        "film_count": 29
+      },
+      {
+        "actor_id": 63,
+        "first_name": "Cameron",
+        "last_name": "Wray",
+        "film_count": 19
+      },
+      {
+        "actor_id": 64,
+        "first_name": "Ray",
+        "last_name": "Johansson",
+        "film_count": 30
+      },
+      {
+        "actor_id": 65,
+        "first_name": "Angela",
+        "last_name": "Hudson",
+        "film_count": 34
+      },
+      {
+        "actor_id": 66,
+        "first_name": "Mary",
+        "last_name": "Tandy",
+        "film_count": 31
+      },
+      {
+        "actor_id": 67,
+        "first_name": "Jessica",
+        "last_name": "Bailey",
+        "film_count": 23
+      },
+      {
+        "actor_id": 68,
+        "first_name": "Rip",
+        "last_name": "Winslet",
+        "film_count": 30
+      },
+      {
+        "actor_id": 69,
+        "first_name": "Kenneth",
+        "last_name": "Paltrow",
+        "film_count": 21
+      },
+      {
+        "actor_id": 70,
+        "first_name": "Michelle",
+        "last_name": "Mcconaughey",
+        "film_count": 23
+      },
+      {
+        "actor_id": 71,
+        "first_name": "Adam",
+        "last_name": "Grant",
+        "film_count": 18
+      },
+      {
+        "actor_id": 72,
+        "first_name": "Sean",
+        "last_name": "Williams",
+        "film_count": 26
+      },
+      {
+        "actor_id": 73,
+        "first_name": "Gary",
+        "last_name": "Penn",
+        "film_count": 26
+      },
+      {
+        "actor_id": 74,
+        "first_name": "Milla",
+        "last_name": "Keitel",
+        "film_count": 28
+      },
+      {
+        "actor_id": 75,
+        "first_name": "Burt",
+        "last_name": "Posey",
+        "film_count": 24
+      },
+      {
+        "actor_id": 76,
+        "first_name": "Angelina",
+        "last_name": "Astaire",
+        "film_count": 31
+      },
+      {
+        "actor_id": 77,
+        "first_name": "Cary",
+        "last_name": "Mcconaughey",
+        "film_count": 24
+      },
+      {
+        "actor_id": 78,
+        "first_name": "Groucho",
+        "last_name": "Sinatra",
+        "film_count": 26
+      },
+      {
+        "actor_id": 79,
+        "first_name": "Mae",
+        "last_name": "Hoffman",
+        "film_count": 28
+      },
+      {
+        "actor_id": 80,
+        "first_name": "Ralph",
+        "last_name": "Cruz",
+        "film_count": 28
+      },
+      {
+        "actor_id": 81,
+        "first_name": "Scarlett",
+        "last_name": "Damon",
+        "film_count": 36
+      },
+      {
+        "actor_id": 82,
+        "first_name": "Woody",
+        "last_name": "Jolie",
+        "film_count": 31
+      },
+      {
+        "actor_id": 83,
+        "first_name": "Ben",
+        "last_name": "Willis",
+        "film_count": 33
+      },
+      {
+        "actor_id": 84,
+        "first_name": "James",
+        "last_name": "Pitt",
+        "film_count": 31
+      },
+      {
+        "actor_id": 85,
+        "first_name": "Minnie",
+        "last_name": "Zellweger",
+        "film_count": 31
+      },
+      {
+        "actor_id": 86,
+        "first_name": "River",
+        "last_name": "Dean",
+        "film_count": 27
+      },
+      {
+        "actor_id": 87,
+        "first_name": "Greg",
+        "last_name": "Chaplin",
+        "film_count": 21
+      },
+      {
+        "actor_id": 88,
+        "first_name": "Spencer",
+        "last_name": "Peck",
+        "film_count": 20
+      },
+      {
+        "actor_id": 89,
+        "first_name": "Kenneth",
+        "last_name": "Pesci",
+        "film_count": 24
+      },
+      {
+        "actor_id": 90,
+        "first_name": "Charlize",
+        "last_name": "Dench",
+        "film_count": 33
+      },
+      {
+        "actor_id": 91,
+        "first_name": "Sean",
+        "last_name": "Guiness",
+        "film_count": 20
+      },
+      {
+        "actor_id": 92,
+        "first_name": "Christopher",
+        "last_name": "Berry",
+        "film_count": 34
+      },
+      {
+        "actor_id": 93,
+        "first_name": "Kirsten",
+        "last_name": "Akroyd",
+        "film_count": 25
+      },
+      {
+        "actor_id": 94,
+        "first_name": "Ellen",
+        "last_name": "Presley",
+        "film_count": 33
+      },
+      {
+        "actor_id": 95,
+        "first_name": "Kenneth",
+        "last_name": "Torn",
+        "film_count": 31
+      },
+      {
+        "actor_id": 96,
+        "first_name": "Daryl",
+        "last_name": "Wahlberg",
+        "film_count": 23
+      },
+      {
+        "actor_id": 97,
+        "first_name": "Gene",
+        "last_name": "Willis",
+        "film_count": 27
+      },
+      {
+        "actor_id": 98,
+        "first_name": "Meg",
+        "last_name": "Hawke",
+        "film_count": 27
+      },
+      {
+        "actor_id": 99,
+        "first_name": "Chris",
+        "last_name": "Bridges",
+        "film_count": 26
+      },
+      {
+        "actor_id": 100,
+        "first_name": "Jim",
+        "last_name": "Mostel",
+        "film_count": 24
+      },
+      {
+        "actor_id": 101,
+        "first_name": "Spencer",
+        "last_name": "Depp",
+        "film_count": 33
+      },
+      {
+        "actor_id": 102,
+        "first_name": "Susan",
+        "last_name": "Davis",
+        "film_count": 41
+      },
+      {
+        "actor_id": 103,
+        "first_name": "Walter",
+        "last_name": "Torn",
+        "film_count": 30
+      },
+      {
+        "actor_id": 104,
+        "first_name": "Matthew",
+        "last_name": "Leigh",
+        "film_count": 31
+      },
+      {
+        "actor_id": 105,
+        "first_name": "Penelope",
+        "last_name": "Cronyn",
+        "film_count": 34
+      },
+      {
+        "actor_id": 106,
+        "first_name": "Sidney",
+        "last_name": "Crowe",
+        "film_count": 35
+      },
+      {
+        "actor_id": 107,
+        "first_name": "Groucho",
+        "last_name": "Dunst",
+        "film_count": 42
+      },
+      {
+        "actor_id": 108,
+        "first_name": "Gina",
+        "last_name": "Degeneres",
+        "film_count": 34
+      },
+      {
+        "actor_id": 109,
+        "first_name": "Warren",
+        "last_name": "Nolte",
+        "film_count": 22
+      },
+      {
+        "actor_id": 110,
+        "first_name": "Sylvester",
+        "last_name": "Dern",
+        "film_count": 21
+      },
+      {
+        "actor_id": 111,
+        "first_name": "Susan",
+        "last_name": "Davis",
+        "film_count": 33
+      },
+      {
+        "actor_id": 112,
+        "first_name": "Cameron",
+        "last_name": "Zellweger",
+        "film_count": 25
+      },
+      {
+        "actor_id": 113,
+        "first_name": "Russell",
+        "last_name": "Bacall",
+        "film_count": 27
+      },
+      {
+        "actor_id": 114,
+        "first_name": "Morgan",
+        "last_name": "Hopkins",
+        "film_count": 25
+      },
+      {
+        "actor_id": 115,
+        "first_name": "Morgan",
+        "last_name": "Mcdormand",
+        "film_count": 28
+      },
+      {
+        "actor_id": 116,
+        "first_name": "Harrison",
+        "last_name": "Bale",
+        "film_count": 24
+      },
+      {
+        "actor_id": 117,
+        "first_name": "Dan",
+        "last_name": "Streep",
+        "film_count": 33
+      },
+      {
+        "actor_id": 118,
+        "first_name": "Renee",
+        "last_name": "Tracy",
+        "film_count": 25
+      },
+      {
+        "actor_id": 119,
+        "first_name": "Cuba",
+        "last_name": "Allen",
+        "film_count": 32
+      },
+      {
+        "actor_id": 120,
+        "first_name": "Warren",
+        "last_name": "Jackman",
+        "film_count": 27
+      },
+      {
+        "actor_id": 121,
+        "first_name": "Penelope",
+        "last_name": "Monroe",
+        "film_count": 25
+      },
+      {
+        "actor_id": 122,
+        "first_name": "Liza",
+        "last_name": "Bergman",
+        "film_count": 25
+      },
+      {
+        "actor_id": 123,
+        "first_name": "Salma",
+        "last_name": "Nolte",
+        "film_count": 32
+      },
+      {
+        "actor_id": 124,
+        "first_name": "Julianne",
+        "last_name": "Dench",
+        "film_count": 26
+      },
+      {
+        "actor_id": 125,
+        "first_name": "Scarlett",
+        "last_name": "Bening",
+        "film_count": 31
+      },
+      {
+        "actor_id": 126,
+        "first_name": "Albert",
+        "last_name": "Nolte",
+        "film_count": 23
+      },
+      {
+        "actor_id": 127,
+        "first_name": "Frances",
+        "last_name": "Tomei",
+        "film_count": 33
+      },
+      {
+        "actor_id": 128,
+        "first_name": "Kevin",
+        "last_name": "Garland",
+        "film_count": 30
+      },
+      {
+        "actor_id": 129,
+        "first_name": "Cate",
+        "last_name": "Mcqueen",
+        "film_count": 30
+      },
+      {
+        "actor_id": 130,
+        "first_name": "Daryl",
+        "last_name": "Crawford",
+        "film_count": 27
+      },
+      {
+        "actor_id": 131,
+        "first_name": "Greta",
+        "last_name": "Keitel",
+        "film_count": 25
+      },
+      {
+        "actor_id": 132,
+        "first_name": "Jane",
+        "last_name": "Jackman",
+        "film_count": 22
+      },
+      {
+        "actor_id": 133,
+        "first_name": "Adam",
+        "last_name": "Hopper",
+        "film_count": 30
+      },
+      {
+        "actor_id": 134,
+        "first_name": "Richard",
+        "last_name": "Penn",
+        "film_count": 22
+      },
+      {
+        "actor_id": 135,
+        "first_name": "Gene",
+        "last_name": "Hopkins",
+        "film_count": 20
+      },
+      {
+        "actor_id": 136,
+        "first_name": "Rita",
+        "last_name": "Reynolds",
+        "film_count": 32
+      },
+      {
+        "actor_id": 137,
+        "first_name": "Ed",
+        "last_name": "Mansfield",
+        "film_count": 27
+      },
+      {
+        "actor_id": 138,
+        "first_name": "Morgan",
+        "last_name": "Williams",
+        "film_count": 24
+      },
+      {
+        "actor_id": 139,
+        "first_name": "Lucille",
+        "last_name": "Dee",
+        "film_count": 33
+      },
+      {
+        "actor_id": 140,
+        "first_name": "Ewan",
+        "last_name": "Gooding",
+        "film_count": 32
+      },
+      {
+        "actor_id": 141,
+        "first_name": "Whoopi",
+        "last_name": "Hurt",
+        "film_count": 28
+      },
+      {
+        "actor_id": 142,
+        "first_name": "Cate",
+        "last_name": "Harris",
+        "film_count": 31
+      },
+      {
+        "actor_id": 143,
+        "first_name": "Jada",
+        "last_name": "Ryder",
+        "film_count": 31
+      },
+      {
+        "actor_id": 144,
+        "first_name": "Angela",
+        "last_name": "Witherspoon",
+        "film_count": 35
+      },
+      {
+        "actor_id": 145,
+        "first_name": "Kim",
+        "last_name": "Allen",
+        "film_count": 28
+      },
+      {
+        "actor_id": 146,
+        "first_name": "Albert",
+        "last_name": "Johansson",
+        "film_count": 33
+      },
+      {
+        "actor_id": 147,
+        "first_name": "Fay",
+        "last_name": "Winslet",
+        "film_count": 31
+      },
+      {
+        "actor_id": 148,
+        "first_name": "Emily",
+        "last_name": "Dee",
+        "film_count": 14
+      },
+      {
+        "actor_id": 149,
+        "first_name": "Russell",
+        "last_name": "Temple",
+        "film_count": 31
+      },
+      {
+        "actor_id": 150,
+        "first_name": "Jayne",
+        "last_name": "Nolte",
+        "film_count": 34
+      },
+      {
+        "actor_id": 151,
+        "first_name": "Geoffrey",
+        "last_name": "Heston",
+        "film_count": 26
+      },
+      {
+        "actor_id": 152,
+        "first_name": "Ben",
+        "last_name": "Harris",
+        "film_count": 23
+      },
+      {
+        "actor_id": 153,
+        "first_name": "Minnie",
+        "last_name": "Kilmer",
+        "film_count": 20
+      },
+      {
+        "actor_id": 154,
+        "first_name": "Meryl",
+        "last_name": "Gibson",
+        "film_count": 28
+      },
+      {
+        "actor_id": 155,
+        "first_name": "Ian",
+        "last_name": "Tandy",
+        "film_count": 31
+      },
+      {
+        "actor_id": 156,
+        "first_name": "Fay",
+        "last_name": "Wood",
+        "film_count": 22
+      },
+      {
+        "actor_id": 157,
+        "first_name": "Greta",
+        "last_name": "Malden",
+        "film_count": 32
+      },
+      {
+        "actor_id": 158,
+        "first_name": "Vivien",
+        "last_name": "Basinger",
+        "film_count": 35
+      },
+      {
+        "actor_id": 159,
+        "first_name": "Laura",
+        "last_name": "Brody",
+        "film_count": 26
+      },
+      {
+        "actor_id": 160,
+        "first_name": "Chris",
+        "last_name": "Depp",
+        "film_count": 20
+      },
+      {
+        "actor_id": 161,
+        "first_name": "Harvey",
+        "last_name": "Hope",
+        "film_count": 32
+      },
+      {
+        "actor_id": 162,
+        "first_name": "Oprah",
+        "last_name": "Kilmer",
+        "film_count": 25
+      },
+      {
+        "actor_id": 163,
+        "first_name": "Christopher",
+        "last_name": "West",
+        "film_count": 21
+      },
+      {
+        "actor_id": 164,
+        "first_name": "Humphrey",
+        "last_name": "Willis",
+        "film_count": 26
+      },
+      {
+        "actor_id": 165,
+        "first_name": "Al",
+        "last_name": "Garland",
+        "film_count": 26
+      },
+      {
+        "actor_id": 166,
+        "first_name": "Nick",
+        "last_name": "Degeneres",
+        "film_count": 22
+      },
+      {
+        "actor_id": 167,
+        "first_name": "Laurence",
+        "last_name": "Bullock",
+        "film_count": 26
+      },
+      {
+        "actor_id": 168,
+        "first_name": "Will",
+        "last_name": "Wilson",
+        "film_count": 31
+      },
+      {
+        "actor_id": 169,
+        "first_name": "Kenneth",
+        "last_name": "Hoffman",
+        "film_count": 29
+      },
+      {
+        "actor_id": 170,
+        "first_name": "Mena",
+        "last_name": "Hopper",
+        "film_count": 24
+      },
+      {
+        "actor_id": 171,
+        "first_name": "Olympia",
+        "last_name": "Pfeiffer",
+        "film_count": 28
+      },
+      {
+        "actor_id": 172,
+        "first_name": "Groucho",
+        "last_name": "Williams",
+        "film_count": 25
+      },
+      {
+        "actor_id": 173,
+        "first_name": "Alan",
+        "last_name": "Dreyfuss",
+        "film_count": 27
+      },
+      {
+        "actor_id": 174,
+        "first_name": "Michael",
+        "last_name": "Bening",
+        "film_count": 24
+      },
+      {
+        "actor_id": 175,
+        "first_name": "William",
+        "last_name": "Hackman",
+        "film_count": 27
+      },
+      {
+        "actor_id": 176,
+        "first_name": "Jon",
+        "last_name": "Chase",
+        "film_count": 29
+      },
+      {
+        "actor_id": 177,
+        "first_name": "Gene",
+        "last_name": "Mckellen",
+        "film_count": 27
+      },
+      {
+        "actor_id": 178,
+        "first_name": "Lisa",
+        "last_name": "Monroe",
+        "film_count": 23
+      },
+      {
+        "actor_id": 179,
+        "first_name": "Ed",
+        "last_name": "Guiness",
+        "film_count": 29
+      },
+      {
+        "actor_id": 180,
+        "first_name": "Jeff",
+        "last_name": "Silverstone",
+        "film_count": 25
+      },
+      {
+        "actor_id": 181,
+        "first_name": "Matthew",
+        "last_name": "Carrey",
+        "film_count": 39
+      },
+      {
+        "actor_id": 182,
+        "first_name": "Debbie",
+        "last_name": "Akroyd",
+        "film_count": 24
+      },
+      {
+        "actor_id": 183,
+        "first_name": "Russell",
+        "last_name": "Close",
+        "film_count": 19
+      },
+      {
+        "actor_id": 184,
+        "first_name": "Humphrey",
+        "last_name": "Garland",
+        "film_count": 29
+      },
+      {
+        "actor_id": 185,
+        "first_name": "Michael",
+        "last_name": "Bolger",
+        "film_count": 30
+      },
+      {
+        "actor_id": 186,
+        "first_name": "Julia",
+        "last_name": "Zellweger",
+        "film_count": 16
+      },
+      {
+        "actor_id": 187,
+        "first_name": "Renee",
+        "last_name": "Ball",
+        "film_count": 33
+      },
+      {
+        "actor_id": 188,
+        "first_name": "Rock",
+        "last_name": "Dukakis",
+        "film_count": 30
+      },
+      {
+        "actor_id": 189,
+        "first_name": "Cuba",
+        "last_name": "Birch",
+        "film_count": 24
+      },
+      {
+        "actor_id": 190,
+        "first_name": "Audrey",
+        "last_name": "Bailey",
+        "film_count": 27
+      },
+      {
+        "actor_id": 191,
+        "first_name": "Gregory",
+        "last_name": "Gooding",
+        "film_count": 30
+      },
+      {
+        "actor_id": 192,
+        "first_name": "John",
+        "last_name": "Suvari",
+        "film_count": 29
+      },
+      {
+        "actor_id": 193,
+        "first_name": "Burt",
+        "last_name": "Temple",
+        "film_count": 23
+      },
+      {
+        "actor_id": 194,
+        "first_name": "Meryl",
+        "last_name": "Allen",
+        "film_count": 22
+      },
+      {
+        "actor_id": 195,
+        "first_name": "Jayne",
+        "last_name": "Silverstone",
+        "film_count": 27
+      },
+      {
+        "actor_id": 196,
+        "first_name": "Bela",
+        "last_name": "Walken",
+        "film_count": 30
+      },
+      {
+        "actor_id": 197,
+        "first_name": "Reese",
+        "last_name": "West",
+        "film_count": 33
+      },
+      {
+        "actor_id": 198,
+        "first_name": "Mary",
+        "last_name": "Keitel",
+        "film_count": 40
+      },
+      {
+        "actor_id": 199,
+        "first_name": "Julia",
+        "last_name": "Fawcett",
+        "film_count": 15
+      },
+      {
+        "actor_id": 200,
+        "first_name": "Thora",
+        "last_name": "Temple",
+        "film_count": 20
+      }
+    ]
+  },
+  {
+    "question": "Show the actors who have appeared in the most films.",
+    "sql": "SELECT a.first_name, a.last_name FROM actor a JOIN film_actor fa ON a.actor_id = fa.actor_id GROUP BY a.actor_id, a.first_name, a.last_name ORDER BY COUNT(*) DESC LIMIT 1;",
+    "expected_result": [
+      {
+        "first_name": "Groucho",
+        "last_name": "Dunst"
+      }
+    ]
+  },
+  {
+    "question": "Which categories are available in the store's film catalog?",
+    "sql": "SELECT DISTINCT c.\"name\" FROM category c JOIN film_category fc ON fc.category_id = c.category_id ORDER BY c.\"name\";",
+    "expected_result": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Animation"
+      },
+      {
+        "name": "Children"
+      },
+      {
+        "name": "Classics"
+      },
+      {
+        "name": "Comedy"
+      },
+      {
+        "name": "Documentary"
+      },
+      {
+        "name": "Drama"
+      },
+      {
+        "name": "Family"
+      },
+      {
+        "name": "Foreign"
+      },
+      {
+        "name": "Games"
+      },
+      {
+        "name": "Horror"
+      },
+      {
+        "name": "Music"
+      },
+      {
+        "name": "New"
+      },
+      {
+        "name": "Sci-Fi"
+      },
+      {
+        "name": "Sports"
+      },
+      {
+        "name": "Travel"
+      }
+    ]
+  },
+  {
+    "question": "How many films are in each category?",
+    "sql": "SELECT c.name AS category, COUNT(fc.film_id) AS film_count FROM category c LEFT JOIN film_category fc ON c.category_id = fc.category_id GROUP BY c.category_id, c.name ORDER BY c.name;",
+    "expected_result": [
+      {
+        "category": "Action",
+        "film_count": 64
+      },
+      {
+        "category": "Animation",
+        "film_count": 66
+      },
+      {
+        "category": "Children",
+        "film_count": 60
+      },
+      {
+        "category": "Classics",
+        "film_count": 57
+      },
+      {
+        "category": "Comedy",
+        "film_count": 58
+      },
+      {
+        "category": "Documentary",
+        "film_count": 68
+      },
+      {
+        "category": "Drama",
+        "film_count": 62
+      },
+      {
+        "category": "Family",
+        "film_count": 69
+      },
+      {
+        "category": "Foreign",
+        "film_count": 73
+      },
+      {
+        "category": "Games",
+        "film_count": 61
+      },
+      {
+        "category": "Horror",
+        "film_count": 56
+      },
+      {
+        "category": "Music",
+        "film_count": 51
+      },
+      {
+        "category": "New",
+        "film_count": 63
+      },
+      {
+        "category": "Sci-Fi",
+        "film_count": 61
+      },
+      {
+        "category": "Sports",
+        "film_count": 74
+      },
+      {
+        "category": "Travel",
+        "film_count": 57
+      }
+    ]
+  },
+  {
+    "question": "Which category has the most films?",
+    "sql": "SELECT c.name FROM category c JOIN film_category fc ON c.category_id = fc.category_id GROUP BY c.category_id, c.name ORDER BY COUNT(*) DESC LIMIT 1;",
+    "expected_result": [
+      {
+        "name": "Sports"
+      }
+    ]
+  },
+  {
+    "question": "List all films in the Comedy category.",
+    "sql": "SELECT f.title FROM film AS f JOIN film_category AS fc ON f.film_id = fc.film_id JOIN category AS c ON fc.category_id = c.category_id WHERE c.name = 'Comedy' ORDER BY f.title;",
+    "expected_result": [
+      {
+        "title": "Adaptation Holes"
+      },
+      {
+        "title": "Analyze Hoosiers"
+      },
+      {
+        "title": "Brannigan Sunrise"
+      },
+      {
+        "title": "Camelot Vacation"
+      },
+      {
+        "title": "Carrie Bunch"
+      },
+      {
+        "title": "Clerks Angels"
+      },
+      {
+        "title": "Confidential Interview"
+      },
+      {
+        "title": "Connection Microcosmos"
+      },
+      {
+        "title": "Cowboy Doom"
+      },
+      {
+        "title": "Cupboard Sinners"
+      },
+      {
+        "title": "Dolls Rage"
+      },
+      {
+        "title": "Double Wrath"
+      },
+      {
+        "title": "Durham Panky"
+      },
+      {
+        "title": "Egypt Tenenbaums"
+      },
+      {
+        "title": "Fellowship Autumn"
+      },
+      {
+        "title": "Fire Wolves"
+      },
+      {
+        "title": "Flight Lies"
+      },
+      {
+        "title": "Forward Temple"
+      },
+      {
+        "title": "Freddy Storm"
+      },
+      {
+        "title": "Godfather Diary"
+      },
+      {
+        "title": "Groundhog Uncut"
+      },
+      {
+        "title": "Gunfight Moon"
+      },
+      {
+        "title": "Harry Idaho"
+      },
+      {
+        "title": "Heartbreakers Bright"
+      },
+      {
+        "title": "Heavyweights Beast"
+      },
+      {
+        "title": "Hunter Alter"
+      },
+      {
+        "title": "Hunting Musketeers"
+      },
+      {
+        "title": "Jaws Harry"
+      },
+      {
+        "title": "Knock Warlock"
+      },
+      {
+        "title": "Lies Treatment"
+      },
+      {
+        "title": "Lights Deer"
+      },
+      {
+        "title": "Lola Agent"
+      },
+      {
+        "title": "Majestic Floats"
+      },
+      {
+        "title": "Meet Chocolate"
+      },
+      {
+        "title": "Movie Shakespeare"
+      },
+      {
+        "title": "Mussolini Spoilers"
+      },
+      {
+        "title": "Open African"
+      },
+      {
+        "title": "Papi Necklace"
+      },
+      {
+        "title": "Park Citizen"
+      },
+      {
+        "title": "Perdition Fargo"
+      },
+      {
+        "title": "Pilot Hoosiers"
+      },
+      {
+        "title": "Punk Divorce"
+      },
+      {
+        "title": "Rushmore Mermaid"
+      },
+      {
+        "title": "Saddle Antitrust"
+      },
+      {
+        "title": "Saturn Name"
+      },
+      {
+        "title": "Seabiscuit Punk"
+      },
+      {
+        "title": "Snatch Slipper"
+      },
+      {
+        "title": "Stage World"
+      },
+      {
+        "title": "Streetcar Intentions"
+      },
+      {
+        "title": "Strictly Scarface"
+      },
+      {
+        "title": "Swarm Gold"
+      },
+      {
+        "title": "Trainspotting Strangers"
+      },
+      {
+        "title": "Tramp Others"
+      },
+      {
+        "title": "Valley Packer"
+      },
+      {
+        "title": "Velvet Terminator"
+      },
+      {
+        "title": "Vertigo Northwest"
+      },
+      {
+        "title": "Wisdom Worker"
+      },
+      {
+        "title": "Zorro Ark"
+      }
+    ]
+  },
+  {
+    "question": "Which films belong to both Action and Adventure categories?",
+    "sql": "SELECT f.title FROM film f JOIN film_category fc ON f.film_id = fc.film_id JOIN category c ON fc.category_id = c.category_id WHERE c.name IN ('Action', 'Adventure') GROUP BY f.film_id, f.title HAVING COUNT(DISTINCT c.name) = 2;",
+    "expected_result": [
+      {
+        "title": ""
+      }
+    ]
+  },
+  {
+    "question": "How many films were released in each year?",
+    "sql": "SELECT release_year, COUNT(*) AS film_count FROM film GROUP BY release_year ORDER BY release_year;",
+    "expected_result": [
+      {
+        "release_year": "2006",
+        "film_count": "1000"
+      }
+    ]
+  },
+  {
+    "question": "Which release year has the most films?",
+    "sql": "SELECT release_year FROM film GROUP BY release_year ORDER BY COUNT(*) DESC LIMIT 1;",
+    "expected_result": [
+      {
+        "release_year": "2006"
+      }
+    ]
+  },
+  {
+    "question": "What is the total replacement cost of all films?",
+    "sql": "SELECT SUM(replacement_cost::numeric) AS total_replacement_cost FROM film;",
+    "expected_result": [
+      {
+        "total_replacement_cost": "19984"
+      }
+    ]
+  },
+  {
+    "question": "What is the average film length by rating?",
+    "sql": "SELECT rating, AVG(length::numeric) AS avg_film_length FROM film GROUP BY rating ORDER BY rating;",
+    "expected_result": [
+      {
+        "rating": "G",
+        "avg_film_length": 111.0505617977528
+      },
+      {
+        "rating": "NC-17",
+        "avg_film_length": 113.22857142857143
+      },
+      {
+        "rating": "PG",
+        "avg_film_length": 112.00515463917526
+      },
+      {
+        "rating": "PG-13",
+        "avg_film_length": 120.4439461883408
+      },
+      {
+        "rating": "R",
+        "avg_film_length": 118.66153846153846
+      }
+    ]
+  }
+]

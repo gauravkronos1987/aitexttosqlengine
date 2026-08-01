@@ -185,14 +185,6 @@ CREATE TABLE public."language" (
 	CONSTRAINT language_pkey PRIMARY KEY (language_id)
 );
 
--- Table Triggers
-
-create trigger last_updated before
-update
-    on
-    public.language for each row execute function last_updated();
-
-
 -- public.payment definition
 
 -- Drop table

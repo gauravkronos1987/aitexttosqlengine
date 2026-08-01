@@ -1,0 +1,121 @@
+question,sqlstatement,relevant_tables
+Which actors have the last name Smith?,"SELECT first_name, last_name FROM actor WHERE last_name = 'Smith';",['actor']
+List the actors whose last name is Smith.,"SELECT first_name, last_name FROM actor WHERE last_name = 'Smith';",['actor']
+Show me the first and last names of actors with the surname Smith.,"SELECT first_name, last_name FROM actor WHERE last_name = 'Smith';",['actor']
+Who are the actors whose last name equals Smith?,"SELECT first_name, last_name FROM actor WHERE last_name = 'Smith';",['actor']
+"Give me the actors named Smith by last name, including first and last name.","SELECT first_name, last_name FROM actor WHERE last_name = 'Smith';",['actor']
+Show me all film titles from 2006.,SELECT title FROM film WHERE release_year = '2006';,['film']
+Give me the titles of every film released in 2006.,SELECT title FROM film WHERE release_year = '2006';,['film']
+Return all movie titles for the year 2006.,SELECT title FROM film WHERE release_year = '2006';,['film']
+I need the titles of films that came out in 2006.,SELECT title FROM film WHERE release_year = '2006';,['film']
+List the titles of all films with a release year of 2006.,SELECT title FROM film WHERE release_year = '2006';,['film']
+List the films whose rental rate is greater than 4.99.,"SELECT title, rental_rate FROM film WHERE rental_rate::numeric > 4.99;",['film']
+Which films have a rental rate above 4.99?,"SELECT title, rental_rate FROM film WHERE rental_rate::numeric > 4.99;",['film']
+Show me the titles and rental rates for films with rental rates over 4.99.,"SELECT title, rental_rate FROM film WHERE rental_rate::numeric > 4.99;",['film']
+"Return the films that cost more than 4.99 to rent, along with their rental rates.","SELECT title, rental_rate FROM film WHERE rental_rate::numeric > 4.99;",['film']
+Find films where the rental rate is above 4.99 and display the title and rental rate.,"SELECT title, rental_rate FROM film WHERE rental_rate::numeric > 4.99;",['film']
+Which films are longer than 180 minutes?,SELECT title FROM film WHERE length::numeric > 180;,['film']
+What films have a runtime greater than 180 minutes?,SELECT title FROM film WHERE length::numeric > 180;,['film']
+List the films that run for more than 180 minutes.,SELECT title FROM film WHERE length::numeric > 180;,['film']
+Show me the titles of films whose length is over 180 minutes.,SELECT title FROM film WHERE length::numeric > 180;,['film']
+Which movie titles have a length above 180 minutes?,SELECT title FROM film WHERE length::numeric > 180;,['film']
+Which actors have the last name Smith?,"SELECT first_name, last_name FROM actor WHERE last_name = 'Smith';",['actor']
+Show me the first and last names of actors whose last name is Smith.,"SELECT first_name, last_name FROM actor WHERE last_name = 'Smith';",['actor']
+"List all actors with the surname Smith, including their first and last names.","SELECT first_name, last_name FROM actor WHERE last_name = 'Smith';",['actor']
+Who in the actor list has last name Smith?,"SELECT first_name, last_name FROM actor WHERE last_name = 'Smith';",['actor']
+Return the first and last names for every actor named Smith by last name.,"SELECT first_name, last_name FROM actor WHERE last_name = 'Smith';",['actor']
+How many films are there in the catalog?,SELECT COUNT(*) AS film_count FROM film;,['film']
+What is the total number of films in the catalog?,SELECT COUNT(*) AS film_count FROM film;,['film']
+Can you tell me how many films are listed in the catalog?,SELECT COUNT(*) AS film_count FROM film;,['film']
+Please give me the count of films in the catalog.,SELECT COUNT(*) AS film_count FROM film;,['film']
+How many films does the catalog contain?,SELECT COUNT(*) AS film_count FROM film;,['film']
+What is the average rental rate of all films?,SELECT AVG(rental_rate::numeric) AS average_rental_rate FROM film;,['film']
+What is the average rental rate across every film?,SELECT AVG(rental_rate::numeric) AS average_rental_rate FROM film;,['film']
+Can you tell me the average rental rate for all films?,SELECT AVG(rental_rate::numeric) AS average_rental_rate FROM film;,['film']
+Please provide the average rental rate of the films in the catalog.,SELECT AVG(rental_rate::numeric) AS average_rental_rate FROM film;,['film']
+What average rental rate do all films have?,SELECT AVG(rental_rate::numeric) AS average_rental_rate FROM film;,['film']
+Which film has the highest replacement cost?,SELECT title FROM film ORDER BY replacement_cost DESC LIMIT 1;,['film']
+What is the title of the film with the greatest replacement cost?,SELECT title FROM film ORDER BY replacement_cost DESC LIMIT 1;,['film']
+Which movie comes out on top when films are sorted by replacement cost from highest to lowest?,SELECT title FROM film ORDER BY replacement_cost DESC LIMIT 1;,['film']
+Give me the title of the film with the largest replacement cost.,SELECT title FROM film ORDER BY replacement_cost DESC LIMIT 1;,['film']
+Which film should be listed first if the films are ordered by replacement cost descending?,SELECT title FROM film ORDER BY replacement_cost DESC LIMIT 1;,['film']
+Which movie has the shortest runtime?,"SELECT title FROM film ORDER BY length::integer ASC, title ASC LIMIT 1;",['film']
+What is the title of the film with the shortest length?,"SELECT title FROM film ORDER BY length::integer ASC, title ASC LIMIT 1;",['film']
+Which film comes first when the films are ordered by length from shortest to longest?,"SELECT title FROM film ORDER BY length::integer ASC, title ASC LIMIT 1;",['film']
+Give me the title of the shortest film.,"SELECT title FROM film ORDER BY length::integer ASC, title ASC LIMIT 1;",['film']
+"Among all films, which one has the least length?","SELECT title FROM film ORDER BY length::integer ASC, title ASC LIMIT 1;",['film']
+What is the single film with the shortest runtime?,"SELECT title FROM film ORDER BY length::integer ASC, title ASC LIMIT 1;",['film']
+"Which movie comes first when films are sorted by runtime from shortest to longest, with title used to break ties?","SELECT title FROM film ORDER BY length::integer ASC, title ASC LIMIT 1;",['film']
+"Show the title of the shortest film, using alphabetical order by title if there is a tie on runtime.","SELECT title FROM film ORDER BY length::integer ASC, title ASC LIMIT 1;",['film']
+"Which film has the lowest length value, with titles sorted ascending when runtimes are equal?","SELECT title FROM film ORDER BY length::integer ASC, title ASC LIMIT 1;",['film']
+Return the title of the film at the top of the list when all films are ordered by runtime ascending and then by title ascending.,"SELECT title FROM film ORDER BY length::integer ASC, title ASC LIMIT 1;",['film']
+How many actors are recorded in the database?,SELECT COUNT(*) AS actor_count FROM public.actor;,['actor']
+What is the total number of actors in the database?,SELECT COUNT(*) AS actor_count FROM public.actor;,['actor']
+Can you tell me the count of actors in the database?,SELECT COUNT(*) AS actor_count FROM public.actor;,['actor']
+How many actor records are there in the database?,SELECT COUNT(*) AS actor_count FROM public.actor;,['actor']
+What number of actors does the database contain?,SELECT COUNT(*) AS actor_count FROM public.actor;,['actor']
+Who acted in the movie Academy Dinosaur?,"SELECT a.first_name, a.last_name FROM actor a JOIN film_actor fa ON a.actor_id = fa.actor_id JOIN film f ON fa.film_id = f.film_id WHERE f.title = 'Academy Dinosaur';","['actor', 'film_actor', 'film']"
+Can you list the actors that appeared in Academy Dinosaur?,"SELECT a.first_name, a.last_name FROM actor a JOIN film_actor fa ON a.actor_id = fa.actor_id JOIN film f ON fa.film_id = f.film_id WHERE f.title = 'Academy Dinosaur';","['actor', 'film_actor', 'film']"
+Which performers were in the film Academy Dinosaur?,"SELECT a.first_name, a.last_name FROM actor a JOIN film_actor fa ON a.actor_id = fa.actor_id JOIN film f ON fa.film_id = f.film_id WHERE f.title = 'Academy Dinosaur';","['actor', 'film_actor', 'film']"
+Show me the actors from Academy Dinosaur.,"SELECT a.first_name, a.last_name FROM actor a JOIN film_actor fa ON a.actor_id = fa.actor_id JOIN film f ON fa.film_id = f.film_id WHERE f.title = 'Academy Dinosaur';","['actor', 'film_actor', 'film']"
+Which cast members appeared in Academy Dinosaur?,"SELECT a.first_name, a.last_name FROM actor a JOIN film_actor fa ON a.actor_id = fa.actor_id JOIN film f ON fa.film_id = f.film_id WHERE f.title = 'Academy Dinosaur';","['actor', 'film_actor', 'film']"
+Which films include actor Nick Wahlberg in the cast?,SELECT f.title FROM film f JOIN film_actor fa ON f.film_id = fa.film_id JOIN actor a ON fa.actor_id = a.actor_id WHERE a.first_name = 'Nick' AND a.last_name = 'Wahlberg';,"['film', 'film_actor', 'actor']"
+What films does Nick Wahlberg appear in?,SELECT f.title FROM film f JOIN film_actor fa ON f.film_id = fa.film_id JOIN actor a ON fa.actor_id = a.actor_id WHERE a.first_name = 'Nick' AND a.last_name = 'Wahlberg';,"['film', 'film_actor', 'actor']"
+List the titles of movies featuring Nick Wahlberg.,SELECT f.title FROM film f JOIN film_actor fa ON f.film_id = fa.film_id JOIN actor a ON fa.actor_id = a.actor_id WHERE a.first_name = 'Nick' AND a.last_name = 'Wahlberg';,"['film', 'film_actor', 'actor']"
+Which movie titles are associated with actor Nick Wahlberg?,SELECT f.title FROM film f JOIN film_actor fa ON f.film_id = fa.film_id JOIN actor a ON fa.actor_id = a.actor_id WHERE a.first_name = 'Nick' AND a.last_name = 'Wahlberg';,"['film', 'film_actor', 'actor']"
+Show the films that feature Nick Wahlberg.,SELECT f.title FROM film f JOIN film_actor fa ON f.film_id = fa.film_id JOIN actor a ON fa.actor_id = a.actor_id WHERE a.first_name = 'Nick' AND a.last_name = 'Wahlberg';,"['film', 'film_actor', 'actor']"
+"Can you show the actor ID, first name, last name, and number of films for every actor, ordered by actor ID?","SELECT a.actor_id, a.first_name, a.last_name, COUNT(fa.film_id) AS film_count FROM actor a LEFT JOIN film_actor fa ON a.actor_id = fa.actor_id GROUP BY a.actor_id, a.first_name, a.last_name ORDER BY a.actor_id;","['actor', 'film_actor']"
+"List each actor with their actor ID, first name, last name, and how many films they have appeared in, in actor ID order.","SELECT a.actor_id, a.first_name, a.last_name, COUNT(fa.film_id) AS film_count FROM actor a LEFT JOIN film_actor fa ON a.actor_id = fa.actor_id GROUP BY a.actor_id, a.first_name, a.last_name ORDER BY a.actor_id;","['actor', 'film_actor']"
+"For every actor, return the actor ID, first name, last name, and total film appearances, sorted by actor ID.","SELECT a.actor_id, a.first_name, a.last_name, COUNT(fa.film_id) AS film_count FROM actor a LEFT JOIN film_actor fa ON a.actor_id = fa.actor_id GROUP BY a.actor_id, a.first_name, a.last_name ORDER BY a.actor_id;","['actor', 'film_actor']"
+"I need the actor ID, first name, last name, and film count for all actors, with the results ordered by actor ID.","SELECT a.actor_id, a.first_name, a.last_name, COUNT(fa.film_id) AS film_count FROM actor a LEFT JOIN film_actor fa ON a.actor_id = fa.actor_id GROUP BY a.actor_id, a.first_name, a.last_name ORDER BY a.actor_id;","['actor', 'film_actor']"
+"Show every actor's actor ID, first name, last name, and the number of films they were in, sorted by actor ID ascending.","SELECT a.actor_id, a.first_name, a.last_name, COUNT(fa.film_id) AS film_count FROM actor a LEFT JOIN film_actor fa ON a.actor_id = fa.actor_id GROUP BY a.actor_id, a.first_name, a.last_name ORDER BY a.actor_id;","['actor', 'film_actor']"
+Show the actors who have appeared in the most films.,"SELECT a.first_name, a.last_name FROM actor a JOIN film_actor fa ON a.actor_id = fa.actor_id GROUP BY a.actor_id, a.first_name, a.last_name ORDER BY COUNT(*) DESC LIMIT 1;","['actor', 'film_actor']"
+Which actor has appeared in the most films?,"SELECT a.first_name, a.last_name FROM actor a JOIN film_actor fa ON a.actor_id = fa.actor_id GROUP BY a.actor_id, a.first_name, a.last_name ORDER BY COUNT(*) DESC LIMIT 1;","['actor', 'film_actor']"
+Find the actor who has been in the greatest number of films.,"SELECT a.first_name, a.last_name FROM actor a JOIN film_actor fa ON a.actor_id = fa.actor_id GROUP BY a.actor_id, a.first_name, a.last_name ORDER BY COUNT(*) DESC LIMIT 1;","['actor', 'film_actor']"
+Return the name of the actor with the highest film count.,"SELECT a.first_name, a.last_name FROM actor a JOIN film_actor fa ON a.actor_id = fa.actor_id GROUP BY a.actor_id, a.first_name, a.last_name ORDER BY COUNT(*) DESC LIMIT 1;","['actor', 'film_actor']"
+List the actor who appears in the most films.,"SELECT a.first_name, a.last_name FROM actor a JOIN film_actor fa ON a.actor_id = fa.actor_id GROUP BY a.actor_id, a.first_name, a.last_name ORDER BY COUNT(*) DESC LIMIT 1;","['actor', 'film_actor']"
+What categories are present in the store's film catalog?,"SELECT DISTINCT c.""name"" FROM category c JOIN film_category fc ON fc.category_id = c.category_id ORDER BY c.""name"";","['category', 'film_category']"
+Can you list the categories available in the film catalog?,"SELECT DISTINCT c.""name"" FROM category c JOIN film_category fc ON fc.category_id = c.category_id ORDER BY c.""name"";","['category', 'film_category']"
+Which film categories can be found in the store catalog?,"SELECT DISTINCT c.""name"" FROM category c JOIN film_category fc ON fc.category_id = c.category_id ORDER BY c.""name"";","['category', 'film_category']"
+Show me the categories offered in the store's film collection.,"SELECT DISTINCT c.""name"" FROM category c JOIN film_category fc ON fc.category_id = c.category_id ORDER BY c.""name"";","['category', 'film_category']"
+What are the available categories for films in the store?,"SELECT DISTINCT c.""name"" FROM category c JOIN film_category fc ON fc.category_id = c.category_id ORDER BY c.""name"";","['category', 'film_category']"
+What is the number of films in each category?,"SELECT c.name AS category, COUNT(fc.film_id) AS film_count FROM category c LEFT JOIN film_category fc ON c.category_id = fc.category_id GROUP BY c.category_id, c.name ORDER BY c.name;","['category', 'film_category']"
+"For every category, how many films does it include?","SELECT c.name AS category, COUNT(fc.film_id) AS film_count FROM category c LEFT JOIN film_category fc ON c.category_id = fc.category_id GROUP BY c.category_id, c.name ORDER BY c.name;","['category', 'film_category']"
+Show the film count for each category.,"SELECT c.name AS category, COUNT(fc.film_id) AS film_count FROM category c LEFT JOIN film_category fc ON c.category_id = fc.category_id GROUP BY c.category_id, c.name ORDER BY c.name;","['category', 'film_category']"
+How many films does each category have?,"SELECT c.name AS category, COUNT(fc.film_id) AS film_count FROM category c LEFT JOIN film_category fc ON c.category_id = fc.category_id GROUP BY c.category_id, c.name ORDER BY c.name;","['category', 'film_category']"
+List each category with its film count.,"SELECT c.name AS category, COUNT(fc.film_id) AS film_count FROM category c LEFT JOIN film_category fc ON c.category_id = fc.category_id GROUP BY c.category_id, c.name ORDER BY c.name;","['category', 'film_category']"
+Which category has the most films?,"SELECT c.name FROM category c JOIN film_category fc ON c.category_id = fc.category_id GROUP BY c.category_id, c.name ORDER BY COUNT(*) DESC LIMIT 1;","['category', 'film_category']"
+What category name is returned for the category with the highest number of films?,"SELECT c.name FROM category c JOIN film_category fc ON c.category_id = fc.category_id GROUP BY c.category_id, c.name ORDER BY COUNT(*) DESC LIMIT 1;","['category', 'film_category']"
+Which film category appears most often in the film list?,"SELECT c.name FROM category c JOIN film_category fc ON c.category_id = fc.category_id GROUP BY c.category_id, c.name ORDER BY COUNT(*) DESC LIMIT 1;","['category', 'film_category']"
+What is the name of the category that is associated with the greatest number of films?,"SELECT c.name FROM category c JOIN film_category fc ON c.category_id = fc.category_id GROUP BY c.category_id, c.name ORDER BY COUNT(*) DESC LIMIT 1;","['category', 'film_category']"
+Which category comes out on top by film count?,"SELECT c.name FROM category c JOIN film_category fc ON c.category_id = fc.category_id GROUP BY c.category_id, c.name ORDER BY COUNT(*) DESC LIMIT 1;","['category', 'film_category']"
+"Show me every film that belongs to the Comedy category, ordered by title.",SELECT f.title FROM film AS f JOIN film_category AS fc ON f.film_id = fc.film_id JOIN category AS c ON fc.category_id = c.category_id WHERE c.name = 'Comedy' ORDER BY f.title;,"['film', 'film_category', 'category']"
+Give me the titles of all films in the Comedy category.,SELECT f.title FROM film AS f JOIN film_category AS fc ON f.film_id = fc.film_id JOIN category AS c ON fc.category_id = c.category_id WHERE c.name = 'Comedy' ORDER BY f.title;,"['film', 'film_category', 'category']"
+List every film title for movies classified under Comedy.,SELECT f.title FROM film AS f JOIN film_category AS fc ON f.film_id = fc.film_id JOIN category AS c ON fc.category_id = c.category_id WHERE c.name = 'Comedy' ORDER BY f.title;,"['film', 'film_category', 'category']"
+What films are included in the Comedy category?,SELECT f.title FROM film AS f JOIN film_category AS fc ON f.film_id = fc.film_id JOIN category AS c ON fc.category_id = c.category_id WHERE c.name = 'Comedy' ORDER BY f.title;,"['film', 'film_category', 'category']"
+"Return all movie titles from the Comedy category, sorted alphabetically by title.",SELECT f.title FROM film AS f JOIN film_category AS fc ON f.film_id = fc.film_id JOIN category AS c ON fc.category_id = c.category_id WHERE c.name = 'Comedy' ORDER BY f.title;,"['film', 'film_category', 'category']"
+Which films are in both the Action and Adventure categories?,"SELECT f.title FROM film f JOIN film_category fc ON f.film_id = fc.film_id JOIN category c ON fc.category_id = c.category_id WHERE c.name IN ('Action', 'Adventure') GROUP BY f.film_id, f.title HAVING COUNT(DISTINCT c.name) = 2;","['film', 'film_category', 'category']"
+Can you list the films that belong to both Action and Adventure?,"SELECT f.title FROM film f JOIN film_category fc ON f.film_id = fc.film_id JOIN category c ON fc.category_id = c.category_id WHERE c.name IN ('Action', 'Adventure') GROUP BY f.film_id, f.title HAVING COUNT(DISTINCT c.name) = 2;","['film', 'film_category', 'category']"
+Show me the titles of films that fall under both Action and Adventure categories.,"SELECT f.title FROM film f JOIN film_category fc ON f.film_id = fc.film_id JOIN category c ON fc.category_id = c.category_id WHERE c.name IN ('Action', 'Adventure') GROUP BY f.film_id, f.title HAVING COUNT(DISTINCT c.name) = 2;","['film', 'film_category', 'category']"
+Which movie titles are tagged with both Action and Adventure?,"SELECT f.title FROM film f JOIN film_category fc ON f.film_id = fc.film_id JOIN category c ON fc.category_id = c.category_id WHERE c.name IN ('Action', 'Adventure') GROUP BY f.film_id, f.title HAVING COUNT(DISTINCT c.name) = 2;","['film', 'film_category', 'category']"
+Find the films that are categorized as both Action and Adventure.,"SELECT f.title FROM film f JOIN film_category fc ON f.film_id = fc.film_id JOIN category c ON fc.category_id = c.category_id WHERE c.name IN ('Action', 'Adventure') GROUP BY f.film_id, f.title HAVING COUNT(DISTINCT c.name) = 2;","['film', 'film_category', 'category']"
+How many films were released in each year?,"SELECT release_year, COUNT(*) AS film_count FROM film GROUP BY release_year ORDER BY release_year;",['film']
+"For each release year, how many films came out?","SELECT release_year, COUNT(*) AS film_count FROM film GROUP BY release_year ORDER BY release_year;",['film']
+Can you show the number of films released by year?,"SELECT release_year, COUNT(*) AS film_count FROM film GROUP BY release_year ORDER BY release_year;",['film']
+What is the film count for each release year?,"SELECT release_year, COUNT(*) AS film_count FROM film GROUP BY release_year ORDER BY release_year;",['film']
+Please list each release year along with how many films were released that year.,"SELECT release_year, COUNT(*) AS film_count FROM film GROUP BY release_year ORDER BY release_year;",['film']
+Which release year has the highest number of films?,SELECT release_year FROM film GROUP BY release_year ORDER BY COUNT(*) DESC LIMIT 1;,['film']
+What release year contains the most films?,SELECT release_year FROM film GROUP BY release_year ORDER BY COUNT(*) DESC LIMIT 1;,['film']
+"For films, which release year comes out on top by film count?",SELECT release_year FROM film GROUP BY release_year ORDER BY COUNT(*) DESC LIMIT 1;,['film']
+Which year of release has the greatest number of films?,SELECT release_year FROM film GROUP BY release_year ORDER BY COUNT(*) DESC LIMIT 1;,['film']
+"Among the film release years, which one has the most titles?",SELECT release_year FROM film GROUP BY release_year ORDER BY COUNT(*) DESC LIMIT 1;,['film']
+What is the total replacement cost of all films?,SELECT SUM(replacement_cost::numeric) AS total_replacement_cost FROM film;,['film']
+Can you give me the total replacement cost across every film?,SELECT SUM(replacement_cost::numeric) AS total_replacement_cost FROM film;,['film']
+What’s the combined replacement cost for all films?,SELECT SUM(replacement_cost::numeric) AS total_replacement_cost FROM film;,['film']
+Please calculate the total replacement cost of the full film catalog.,SELECT SUM(replacement_cost::numeric) AS total_replacement_cost FROM film;,['film']
+I need the total replacement cost for every film in the collection.,SELECT SUM(replacement_cost::numeric) AS total_replacement_cost FROM film;,['film']
+What is the average film length for each rating?,"SELECT rating, AVG(length::numeric) AS avg_film_length FROM film GROUP BY rating ORDER BY rating;",['film']
+Can you show the average length of films grouped by rating?,"SELECT rating, AVG(length::numeric) AS avg_film_length FROM film GROUP BY rating ORDER BY rating;",['film']
+"For every rating, what is the average movie length?","SELECT rating, AVG(length::numeric) AS avg_film_length FROM film GROUP BY rating ORDER BY rating;",['film']
+Please list the average film runtime by rating category.,"SELECT rating, AVG(length::numeric) AS avg_film_length FROM film GROUP BY rating ORDER BY rating;",['film']
+"How long are films on average, broken out by rating?","SELECT rating, AVG(length::numeric) AS avg_film_length FROM film GROUP BY rating ORDER BY rating;",['film']

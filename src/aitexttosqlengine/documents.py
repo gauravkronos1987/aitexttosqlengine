@@ -97,7 +97,15 @@ Relationships:
 {relationship_text}
 """.strip()
 
-        documents.append(Document(page_content=page_content, metadata={"table": table_name}))
+        documents.append(  Document(
+        page_content=page_content,
+        metadata={
+            "table": table_name,
+            "description": table.get("description", ""),
+            "column_count": len(columns),
+            "columns": [column["name"] for column in columns],
+        },
+    ))
 
     return documents
 
