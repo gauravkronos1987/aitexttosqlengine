@@ -90,7 +90,16 @@ def render_sql_assistant():
 # ---------------------------------------------------------------------------
 def render_monitoring_dashboard():
     st.title("Evaluation Dashboard")
-    
+
+    if st.button("Run evaluation"):
+        with st.spinner("Running retrieval evaluation..."):
+            from aitexttosqlengine.run_evaluation import run_evaluation
+
+            run_evaluation()
+
+        st.success("Evaluation completed.")
+        st.rerun()
+
     metrics = load_evaluation_metrics()
 
     if metrics is None:
