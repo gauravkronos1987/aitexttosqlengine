@@ -1,96 +1,147 @@
-# aitexttosqlengine
+# AI Text-to-SQL Engine
 
-A prototype project that converts natural language questions into SQL queries using LangChain, OpenAI, and Chroma vector search.
+An intelligent natural language to SQL query converter that leverages LangChain, OpenAI, and Chroma vector search to transform plain English questions into accurate PostgreSQL queries.
 
-## 🚀 Live Deployment
+## 🎯 Problem Statement
 
-This application is now deployed and live on **Streamlit Cloud**! You can access the interactive web interface directly without any local setup required.
+Writing SQL queries requires technical expertise and knowledge of database schemas. This creates a barrier for non-technical users who need to extract insights from databases. This project solves that problem by allowing users to ask questions in natural language and automatically generating the corresponding SQL queries.
 
-## What this project does
+## 🚀 Live Demo
 
-- Builds a `Chroma` vector store from text documents describing database tables.
-- Uses `OpenAIEmbeddings` to embed table and schema information.
-- Defines a searchable tool for the agent to retrieve relevant schema details.
-- Creates a LangChain agent with `ChatOpenAI` and guided instructions.
-- Generates SQL queries from user questions and extracts them from model responses.
-- Executes queries and returns formatted results through an interactive web interface.
-- Demonstrates a Postgres connection using `psycopg`.
-- Provides a user-friendly Streamlit web interface for querying databases with natural language.
+This application is deployed and live on **Streamlit Cloud**! Access the interactive web interface without any local setup required.
 
-## Key files
+[🔗 Try the Live Demo](#) *(Add your deployment URL here)*
 
-- `texttosql.ipynb` - original notebook reference for code and workflow.
-- `pyproject.toml` - project metadata and installable package configuration.
-- `main.py` - package entrypoint wrapper.
-- `src/aitexttosqlengine/engine.py` - text-to-SQL agent and vector search logic.
-- `src/aitexttosqlengine/db.py` - Postgres database schema initialization and sample data seeding.
-- `src/aitexttosqlengine/cli.py` - command-line interface for generating SQL and initializing the database.
-- `src/aitexttosqlengine/app.py` - interactive Streamlit web interface for the Course Assistant.
+## ✨ Key Features
 
-## Dependencies
+- **Natural Language Processing**: Convert plain English questions into SQL queries
+- **Intelligent Schema Search**: Uses vector embeddings to find relevant database tables and columns
+- **RAG-Based Architecture**: Retrieves schema context before generating queries
+- **Multi-Interface Support**: Web UI (Streamlit), CLI, and Python API
+- **PostgreSQL Integration**: Direct database connection and query execution
+- **Evaluation Dashboard**: Monitor retrieval performance with Hit Rate and MRR metrics
+- **Production Ready**: Includes Docker support, testing, and evaluation framework
 
-This project requires Python 3.12+ and installs the following packages:
+## 📊 How It Works
 
-- `chromadb`
-- `jupyter`
-- `langchain`
-- `langchain-chroma`
-- `langchain-openai`
-- `minsearch`
-- `openai`
-- `psycopg[binary]`
-- `python-dotenv`
-- `requests`
-- `streamlit` - for the interactive web interface
+1. **Schema Indexing**: Database table schemas are embedded using OpenAI embeddings and stored in a Chroma vector database
+2. **Query Understanding**: User's natural language question is processed
+3. **Context Retrieval**: Relevant table schemas are retrieved using semantic similarity search
+4. **SQL Generation**: LangChain agent generates PostgreSQL query based on retrieved context
+5. **Execution**: Query is executed against the database and results are returned
+6. **Evaluation**: System performance is monitored using retrieval metrics
 
-## Usage
+![System Architecture](docs/architecture-diagram.png) *(Add a diagram if available)*
 
-### Web Interface (Streamlit Cloud)
+## 📈 Evaluation Criteria
 
-The easiest way to use this application is through the live Streamlit Cloud deployment. Simply visit the deployed URL and start asking natural language questions about your database.
+This project implements a comprehensive evaluation framework to measure system performance:
 
-### Local Installation
+### Retrieval Metrics
+- **Hit Rate**: 96.67% - Percentage of queries where relevant tables are retrieved
+- **MRR (Mean Reciprocal Rank)**: 0.967 - Measures how highly relevant results are ranked
+- **Evaluated Questions**: 120 test cases
 
-1. Create a virtual environment:
+These metrics are tracked in `evaluation_metrics.json` and can be viewed in the Evaluation Dashboard.
 
+### Why These Metrics Matter
+- **Hit Rate** ensures the system finds the right tables for user questions
+- **MRR** measures the quality of ranking (finding relevant tables in top positions)
+- Regular evaluation helps maintain and improve system accuracy
+
+## 🚦 Quick Start
+
+### Prerequisites
+- Python 3.12 or higher
+- PostgreSQL database (optional for local development)
+- OpenAI API key
+
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/aitexttosqlengine.git
+cd aitexttosqlengine
+```
+
+2. **Create a virtual environment**
 ```bash
 python -m venv .venv
+# On Windows
+.venv\Scripts\activate
+# On macOS/Linux
 source .venv/bin/activate
 ```
 
-2. Install dependencies:
-
+3. **Install dependencies**
 ```bash
 pip install -e .
 ```
 
-3. Set your OpenAI API key:
-
+4. **Set up environment variables**
 ```bash
-export OPENAI_API_KEY="your-key-here"
+# Create a .env file or export directly
+export OPENAI_API_KEY="your-openai-api-key-here"
+export DATABASE_URL="postgresql://user:password@localhost:5432/dbname"
 ```
 
-### Running Locally
+For detailed setup instructions, see [SETUP.md](SETUP.md).
 
-**Option A: Web Interface**
+## 💻 Usage
 
-Run the Streamlit app locally:
+### Option 1: Web Interface (Recommended)
+
+Run the Streamlit application:
 
 ```bash
 streamlit run src/aitexttosqlengine/app.py
 ```
 
-The application will open in your browser. You can then enter natural language queries in the text input field and click "Ask" to get SQL queries and results.
+The app provides two main features:
+1. **SQL Assistant**: Enter natural language queries and get SQL + results
+2. **Evaluation Dashboard**: Monitor system performance metrics
 
-**Option B: Command Line**
+**Example Questions:**
+- "Which actors have the last name Smith?"
+- "List all films released in 2006"
+- "What are the top 5 customers by total rental amount?"
 
-Use the installed CLI:
+### Option 2: Command Line Interface
 
 ```bash
-python -m aitexttosqlengine "What are the top customers by revenue?"
+# Generate and execute SQL from natural language
+python -m aitexttosqlengine "Show me all customers from Canada"
+
+# Initialize the database with sample data
+aitexttosqlengine --init-db
+
+# Use custom database connection
+aitexttosqlengine "List all actors" --dsn "postgresql://user:pass@host:5432/db"
 ```
 
-## Testing
+### Option 3: Python API
+
+```python
+from aitexttosqlengine.engine import TextToSQLEngine
+from aitexttosqlengine.db import DatabaseManager
+
+# Initialize the engine
+engine = TextToSQLEngine()
+
+# Generate SQL from natural language
+sql = engine.generate_sql("What are the top 10 films by rental revenue?")
+print(sql)
+
+# Execute the query
+db = DatabaseManager("postgresql://localhost/dvdrental")
+headers, rows = db.query(sql)
+print(headers)
+print(rows)
+```
+
+For more examples and use cases, see [USAGE.md](USAGE.md).
+
+## 🧪 Testing
 
 Install test dependencies:
 
@@ -98,58 +149,146 @@ Install test dependencies:
 pip install -e .[dev]
 ```
 
-Run the tests with pytest:
+Run the test suite:
 
 ```bash
 pytest
 ```
 
-The test suite covers:
+The test suite includes:
+- SQL extraction and parsing logic
+- Database connection and query execution
+- Table formatting utilities
+- Schema document loading
 
-- SQL extraction logic in `src/aitexttosqlengine/engine.py`
-- pretty table formatting in `src/aitexttosqlengine/cli.py`
-- database header extraction in `src/aitexttosqlengine/db.py` using a mocked connection
+Test coverage includes unit tests for all core components.
 
-## Database Initialization
+## 🐳 Docker Deployment
 
-If you want to initialize and seed the default Postgres database:
+Build and run using Docker:
 
 ```bash
-aitexttosqlengine --init-db
+# Build the image
+docker build -t aitexttosqlengine .
+
+# Run the container
+docker run -p 8501:8501 \
+  -e OPENAI_API_KEY="your-key" \
+  -e DATABASE_URL="your-db-url" \
+  aitexttosqlengine
 ```
 
-## Notes
+Access the application at `http://localhost:8501`
 
-- Use the notebook (`texttosql.ipynb`) as a reference for the original workflow and sample dataset.
-- For the Streamlit Cloud deployment, secrets are managed through Streamlit's secrets management system.
-- The application supports both local and cloud database connections via environment variables.
+## 📁 Project Structure
 
-## Example
+```
+aitexttosqlengine/
+├── src/aitexttosqlengine/
+│   ├── app.py              # Streamlit web interface
+│   ├── engine.py           # Core text-to-SQL engine with LangChain
+│   ├── db.py               # Database manager and initialization
+│   ├── cli.py              # Command-line interface
+│   ├── documents.py        # Schema document definitions
+│   ├── search.py           # Schema search functionality
+│   ├── evaluation.py       # Evaluation metrics (Hit Rate, MRR)
+│   └── run_search_evaluation.py  # Evaluation runner
+├── tests/                  # Test suite
+├── texttosql.ipynb        # Original prototype notebook
+├── dvdrentalddl.sql       # Database schema DDL
+├── export_202607281151.sql # Sample data
+├── evaluation_metrics.json # Latest evaluation results
+├── dockerfile             # Docker configuration
+└── pyproject.toml         # Project dependencies
 
-The notebook includes an example question:
+```
 
-> "What are the top customers by revenue?"
+## 📸 Screenshots
 
-The agent searches schema summaries and returns a SQL statement such as:
+### SQL Assistant Interface
+*(Add screenshot of the Streamlit interface showing a natural language query and generated SQL)*
 
+### Evaluation Dashboard
+*(Add screenshot of the evaluation metrics dashboard)*
+
+### Example Query Results
+*(Add screenshot showing query execution and results table)*
+
+## 🎓 Example Use Cases
+
+### 1. Finding Actors
+**Question**: "Which actors have the last name Smith?"
+
+**Generated SQL**:
 ```sql
-SELECT
-  c.customer_id,
-  c.name,
-  SUM(o.amount) AS total_revenue
-FROM customers c
-JOIN orders o ON c.customer_id = o.customer_id
-GROUP BY c.customer_id, c.name
-ORDER BY total_revenue DESC
+SELECT first_name, last_name 
+FROM actor 
+WHERE last_name = 'Smith';
+```
+
+### 2. Film Analysis
+**Question**: "List all films released in 2006 ordered by title"
+
+**Generated SQL**:
+```sql
+SELECT title 
+FROM film 
+WHERE release_year = '2006' 
+ORDER BY title;
+```
+
+### 3. Revenue Analysis
+**Question**: "What are the top 10 customers by total rental amount?"
+
+**Generated SQL**:
+```sql
+SELECT c.customer_id, c.first_name, c.last_name, SUM(p.amount) AS total_amount
+FROM customer c
+JOIN payment p ON c.customer_id = p.customer_id
+GROUP BY c.customer_id, c.first_name, c.last_name
+ORDER BY total_amount DESC
 LIMIT 10;
 ```
 
-## Notes
+## 🔧 Configuration
 
-- `texttosql.ipynb` is the current implementation prototype.
-- The notebook also includes a helper function `findSql(query: str) -> str` to return the generated SQL query.
-- If you connect to a Postgres database, update the connection string in the notebook before use.
+### Environment Variables
 
-## License
+- `OPENAI_API_KEY` (required): Your OpenAI API key
+- `DATABASE_URL` (optional): PostgreSQL connection string
+  - Format: `postgresql://user:password@host:port/database`
+  - Default: `postgresql://postgres:postgres@localhost:5432/dvdrental`
+
+### Streamlit Secrets
+
+For Streamlit Cloud deployment, add secrets in `.streamlit/secrets.toml`:
+
+```toml
+OPENAI_API_KEY = "your-key-here"
+DATABASE_URL = "your-database-url"
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
 
 This repository currently has no license specified.
+
+## 📚 Additional Documentation
+
+- [SETUP.md](SETUP.md) - Detailed setup and installation guide
+- [USAGE.md](USAGE.md) - Comprehensive usage examples and tutorials
+- [EVALUATION.md](EVALUATION.md) - Evaluation methodology and metrics
+- [ARCHITECTURE.md](ARCHITECTURE.md) - System architecture and design decisions
+
+## 🙏 Acknowledgments
+
+This project uses:
+- **LangChain** for agent orchestration
+- **OpenAI** for embeddings and language models
+- **Chroma** for vector storage
+- **PostgreSQL** for database operations
+- **Streamlit** for the web interface
+- **DVD Rental Database** as sample data
