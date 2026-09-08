@@ -31,7 +31,8 @@ https://aitexttosqlengine-fsujahdyy5sx4mroydbja2.streamlit.app/
 5. **Execution**: Query is executed against the database and results are returned
 6. **Evaluation**: System performance is monitored using retrieval metrics
 
-![System Architecture](docs/architecture-diagram.png) *(Add a diagram if available)*
+<img width="881" height="396" alt="image" src="https://github.com/user-attachments/assets/ccc9f7e6-4117-482f-9869-41134715f846" />
+
 
 ## 📈 Evaluation Criteria
 
