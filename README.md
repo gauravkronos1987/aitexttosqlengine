@@ -10,7 +10,7 @@ Writing SQL queries requires technical expertise and knowledge of database schem
 
 This application is deployed and live on **Streamlit Cloud**! Access the interactive web interface without any local setup required.
 
-[🔗 Try the Live Demo](#) *(Add your deployment URL here)*
+[🔗 Try the Live Demo](#) *(https://aitexttosqlengine-fsujahdyy5sx4mroydbja2.streamlit.app/)*
 
 ## ✨ Key Features
 
